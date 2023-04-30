@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Colonia {
     int numObreras, numSoldadosyCrias;
     int obrerasID, soldadosID, criasID, iter;
+    boolean hayInvasor;
     AtomicInteger unidadesComida, unidadesComidaComedor;
     Semaphore tunelEntrada, zonaDeComida;
     HashMap<Integer, HObrera> obreras;
@@ -12,19 +13,24 @@ public class Colonia {
     HashMap<Integer, HCria> crias;
 
     public Colonia() {
-        numObreras = 6000;
-        numSoldadosyCrias = 2000;
-        obrerasID = 1;
-        soldadosID = 1;
-        criasID = 1;
-        iter = 0;
-        unidadesComida = new AtomicInteger();
-        unidadesComidaComedor = new AtomicInteger();
-        tunelEntrada = new Semaphore(2, true);
-        zonaDeComida = new Semaphore(10, true);
-        obreras = new HashMap<>();
-        soldados = new HashMap<>();
-        crias = new HashMap<>();
+        this.numObreras = 6000;
+        this.numSoldadosyCrias = 2000;
+        this.obrerasID = 1;
+        this.soldadosID = 1;
+        this.criasID = 1;
+        this.iter = 0;
+        this.hayInvasor = false;
+        this.unidadesComida = new AtomicInteger();
+        this.unidadesComidaComedor = new AtomicInteger();
+        this.tunelEntrada = new Semaphore(2, true);
+        this.zonaDeComida = new Semaphore(10, true);
+        this.obreras = new HashMap<>();
+        this.soldados = new HashMap<>();
+        this.crias = new HashMap<>();
+    }
+
+    public boolean hayInvasor() {
+        return hayInvasor;
     }
 
     public void accederAlComedor(int min, int max, int comida) {
@@ -53,11 +59,40 @@ public class Colonia {
             zonaDeComida.acquire();
             Thread.sleep(tiempoAlmacenando);
             unidadesComida.addAndGet(comida);
+
+            synchronized (this) {
+                notifyAll();
+            }
         } catch (InterruptedException ignored) {
+        } finally {
+            zonaDeComida.release();
         }
     }
 
+    public void recogerDelAlmacen(int min, int max, int comida) {
+        int tiempoRecogiendo = (int) (Math.random() * (max - min)) + min;
 
+        synchronized (this) {
+            try {
+                while (this.unidadesComida.get() - comida < 0) {
+                    wait();
+                }
+
+                Thread.sleep(tiempoRecogiendo);
+                this.unidadesComida.addAndGet(-comida);
+            } catch (InterruptedException ignored) {
+            }
+        }
+    }
+
+    public void zonaDeInstruccion(int min, int max) {
+        int tiempoInstruccion = (int) (Math.random() * (max - min)) + min;
+
+        try {
+            Thread.sleep(tiempoInstruccion);
+        } catch (InterruptedException ignored) {
+        }
+    }
 
     public void activarHormiwi(int id) {
         HObrera hormiwi = obreras.get(id);

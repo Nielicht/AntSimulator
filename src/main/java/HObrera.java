@@ -6,7 +6,7 @@ public class HObrera extends Thread {
 
     public HObrera(int id, Colonia colonia) {
         this.id = "HO" + String.format("%04d", id);
-        this.iter = 2;
+        this.iter = 10;
         this.colonia = colonia;
         this.comidaTransportada = 0;
     }
@@ -21,7 +21,7 @@ public class HObrera extends Thread {
     }
 
     public void recogerComidaAlmacen() {
-        colonia.accederAlAlmacen(1000, 2000, -5);
+        colonia.recogerDelAlmacen(1000, 2000, 5);
         this.comidaTransportada += 5;
     }
 
@@ -58,14 +58,15 @@ public class HObrera extends Thread {
     public void run() {
         colonia.accederTunelEntrada();
         int id = Integer.parseInt(this.id.replaceAll("\\D+", ""));
+        boolean esPar = id % 2 == 0;
 
         while (true) {
-            if (iter > 0 && id % 2 == 0) { // Hormigas pares
+            if (iter > 0 && esPar) { // Hormigas pares
                 recogerComidaAlmacen();
                 irZonaComedor();
                 depositarComida();
                 iter--;
-            } else if (iter > 0 && id % 2 != 0) { // Hormigas impares
+            } else if (iter > 0 && !esPar) { // Hormigas impares
                 recogerComida();
                 almacenarComida();
                 iter--;
