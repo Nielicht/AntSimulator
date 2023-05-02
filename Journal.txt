@@ -1,2 +1,8 @@
 Sunday, 30th of April
-- You have to find a way to alert soldier ants of an insect invasion
+- Soldier ants routine implemented.
+- You have to find a way to alert soldier ants of an insect invasion.
+
+Tuesday, 2nd of May
+- Reworked running code of Workers and Soldiers.
+- Soldier ants now respond to threatening insects, but cyclicBarrier seems to have problems with big amounts of Ants.
+- Baby ants should be done for next session

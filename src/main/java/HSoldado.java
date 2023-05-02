@@ -1,3 +1,5 @@
+import java.util.concurrent.BrokenBarrierException;
+
 public class HSoldado extends Thread {
 
     String id;
@@ -11,17 +13,26 @@ public class HSoldado extends Thread {
     }
 
     void protegerColonia() {
+        try {
+            System.out.println("¡Hormiga soldado " + id + " acude a repeler el invasor!");
+            colonia.repelerInvasor();
+            System.out.println("¡Hormiga soldado " + id + " ha repelido al invasor!");
+        } catch (BrokenBarrierException e) {
+            System.out.println("Algo fue mal con el cyclic barrier...");
+            e.printStackTrace();
+        } catch (InterruptedException ignored) {
+        }
     }
 
-    void instruccion() {
+    void instruccion() throws InterruptedException {
         colonia.zonaDeInstruccion(2000, 8000);
     }
 
-    void descansar() {
+    void descansar() throws InterruptedException {
         colonia.descansar(2000, 2000);
     }
 
-    void comer() {
+    void comer() throws InterruptedException {
         colonia.accederAlComedor(3000, 3000, -1);
         System.out.println("Hormiga " + this.id + " procedió a la comisión\n");
     }
@@ -29,18 +40,43 @@ public class HSoldado extends Thread {
     @Override
     public void run() {
         colonia.accederTunelEntrada();
-
         while (true) {
-            if (colonia.hayInvasor()) {
+            try {
+                if (this.iter > 0) {
+                    instruccion();
+                    descansar();
+                    this.iter--;
+                } else {
+                    comer();
+                    this.iter = 6;
+                }
+            } catch (InterruptedException ignored) {
                 protegerColonia();
-            } else if (this.iter > 0) {
-                instruccion();
-                descansar();
-                this.iter--;
-            } else {
-                comer();
-                this.iter = 6;
             }
         }
+
+//        while (true) {
+//            if (Thread.interrupted()) {
+//                try {
+//                    protegerColonia();
+//                } catch (Exception ignored) {
+//                }
+//            } else if (this.iter > 0) {
+//                try {
+//                    instruccion();
+//                    descansar();
+//                    this.iter--;
+//                } catch (InterruptedException ignored) {
+//                    Thread.currentThread().interrupt();
+//                }
+//            } else {
+//                try {
+//                    comer();
+//                    this.iter = 6;
+//                } catch (InterruptedException ignored) {
+//                    Thread.currentThread().interrupt();
+//                }
+//            }
+//        }
     }
 }

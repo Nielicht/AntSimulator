@@ -11,46 +11,39 @@ public class HObrera extends Thread {
         this.comidaTransportada = 0;
     }
 
-    public void recogerComida() {
+    public void recogerComida() throws InterruptedException {
         colonia.accederTunerSalida();
-        try {
-            Thread.sleep(4000);
-            comidaTransportada += 5;
-        } catch (InterruptedException ignored) {
-        }
+        Thread.sleep(4000);
+        comidaTransportada += 5;
     }
 
-    public void recogerComidaAlmacen() {
+    public void recogerComidaAlmacen() throws InterruptedException {
         colonia.recogerDelAlmacen(1000, 2000, 5);
         this.comidaTransportada += 5;
     }
 
-    public void almacenarComida() {
+    public void almacenarComida() throws InterruptedException {
         colonia.accederTunelEntrada();
         colonia.accederAlAlmacen(2000, 4000, this.comidaTransportada);
         this.comidaTransportada = 0;
     }
 
-    public void irZonaComedor() {
+    public void irZonaComedor() throws InterruptedException {
         int tiempoCaminando = (int) (Math.random() * 2000) + 1000;
-
-        try {
-            Thread.sleep(tiempoCaminando);
-        } catch (InterruptedException ignored) {
-        }
+        Thread.sleep(tiempoCaminando);
     }
 
-    public void depositarComida() {
+    public void depositarComida() throws InterruptedException {
         colonia.accederAlComedor(1000, 2000, comidaTransportada);
         this.comidaTransportada = 0;
     }
 
-    private void comer() {
+    private void comer() throws InterruptedException {
         colonia.accederAlComedor(3000, 3000, -1);
         System.out.println("Hormiga " + this.id + " procedió a la comisión\n");
     }
 
-    private void descansar() {
+    private void descansar() throws InterruptedException {
         colonia.descansar(1000, 1000);
     }
 
@@ -61,20 +54,50 @@ public class HObrera extends Thread {
         boolean esPar = id % 2 == 0;
 
         while (true) {
-            if (iter > 0 && esPar) { // Hormigas pares
-                recogerComidaAlmacen();
-                irZonaComedor();
-                depositarComida();
-                iter--;
-            } else if (iter > 0 && !esPar) { // Hormigas impares
-                recogerComida();
-                almacenarComida();
-                iter--;
-            } else { // Descanso time
-                comer();
-                descansar();
-                this.iter = 10;
+            try {
+                if (iter > 0 && esPar) { // Hormigas pares
+                    recogerComidaAlmacen();
+                    irZonaComedor();
+                    depositarComida();
+                    iter--;
+                } else if (iter > 0 && !esPar) { // Hormigas impares
+                    recogerComida();
+                    almacenarComida();
+                    iter--;
+                } else { // Descanso time
+                    comer();
+                    descansar();
+                    this.iter = 10;
+                }
+            } catch (InterruptedException ignored) {
             }
         }
+
+
+//        while (true) {
+//            if (iter > 0 && esPar) { // Hormigas pares
+//                try {
+//                    recogerComidaAlmacen();
+//                    irZonaComedor();
+//                    depositarComida();
+//                    iter--;
+//                } catch (InterruptedException ignored) {
+//                }
+//            } else if (iter > 0 && !esPar) { // Hormigas impares
+//                try {
+//                    recogerComida();
+//                    almacenarComida();
+//                    iter--;
+//                } catch (InterruptedException ignored) {
+//                }
+//            } else { // Descanso time
+//                try {
+//                    comer();
+//                    descansar();
+//                    this.iter = 10;
+//                } catch (InterruptedException ignored) {
+//                }
+//            }
+//        }
     }
 }
