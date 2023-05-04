@@ -1,8 +1,8 @@
 public class HObrera extends Thread {
 
-    String id;
-    Colonia colonia;
-    int iter, comidaTransportada;
+    private String id;
+    private Colonia colonia;
+    private int iter, comidaTransportada;
 
     public HObrera(int id, Colonia colonia) {
         this.id = "HO" + String.format("%04d", id);
@@ -11,39 +11,46 @@ public class HObrera extends Thread {
         this.comidaTransportada = 0;
     }
 
-    public void recogerComida() throws InterruptedException {
+    private void recogerComida() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " sale a recoger comida");
         colonia.accederTunerSalida();
         Thread.sleep(4000);
         comidaTransportada += 5;
     }
 
-    public void recogerComidaAlmacen() throws InterruptedException {
+    private void recogerComidaAlmacen() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " entra al almacen a recoger comida");
         colonia.recogerDelAlmacen(1000, 2000, 5);
         this.comidaTransportada += 5;
     }
 
-    public void almacenarComida() throws InterruptedException {
+    private void almacenarComida() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " entra al almacen a almacenar comida");
         colonia.accederTunelEntrada();
         colonia.accederAlAlmacen(2000, 4000, this.comidaTransportada);
         this.comidaTransportada = 0;
     }
 
-    public void irZonaComedor() throws InterruptedException {
+    private void irZonaComedor() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " se dispone a ir hacia el comedor");
         int tiempoCaminando = (int) (Math.random() * 2000) + 1000;
         Thread.sleep(tiempoCaminando);
     }
 
-    public void depositarComida() throws InterruptedException {
+    private void depositarComida() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " entra en el comedor y se dispone a servir comida");
         colonia.accederAlComedor(1000, 2000, comidaTransportada);
         this.comidaTransportada = 0;
     }
 
     private void comer() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " procede a comer");
         colonia.accederAlComedor(3000, 3000, -1);
         System.out.println("Hormiga " + this.id + " procedió a la comisión\n");
     }
 
     private void descansar() throws InterruptedException {
+        colonia.logger.log("Hormiga obrera " + this.id + " procede a descansar");
         colonia.descansar(1000, 1000);
     }
 
@@ -72,32 +79,5 @@ public class HObrera extends Thread {
             } catch (InterruptedException ignored) {
             }
         }
-
-
-//        while (true) {
-//            if (iter > 0 && esPar) { // Hormigas pares
-//                try {
-//                    recogerComidaAlmacen();
-//                    irZonaComedor();
-//                    depositarComida();
-//                    iter--;
-//                } catch (InterruptedException ignored) {
-//                }
-//            } else if (iter > 0 && !esPar) { // Hormigas impares
-//                try {
-//                    recogerComida();
-//                    almacenarComida();
-//                    iter--;
-//                } catch (InterruptedException ignored) {
-//                }
-//            } else { // Descanso time
-//                try {
-//                    comer();
-//                    descansar();
-//                    this.iter = 10;
-//                } catch (InterruptedException ignored) {
-//                }
-//            }
-//        }
     }
 }

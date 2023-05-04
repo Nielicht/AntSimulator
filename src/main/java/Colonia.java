@@ -1,51 +1,72 @@
 import java.util.HashMap;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Colonia {
-    int numObreras, numSoldadosyCrias;
-    int obrerasID, soldadosID, criasID, iter;
-    AtomicInteger unidadesComida, unidadesComidaComedor;
-    Semaphore tunelEntrada, zonaDeComida;
-    CyclicBarrier invasionAgrupacion;
-    HashMap<Integer, HObrera> obreras;
-    ConcurrentHashMap<Integer, HSoldado> soldados;
-    HashMap<Integer, HCria> crias;
+    public Logger logger;
+    private boolean invasorPresente;
+    private int obrerasPorGenerar, soldadosyCriasPorGenerar, obrerasID, soldadosID, criasID, iter;
+    private AtomicInteger unidadesComidaAlmacen, unidadesComidaComedor;
+    private Semaphore tunelEntrada, zonaDeComida;
+    private CyclicBarrier invasionAgrupacion;
+    private CountDownLatch invasorRepelido;
+    private HashMap<Integer, HObrera> obreras;
+    private ConcurrentHashMap<Integer, HSoldado> soldados;
+    private ConcurrentHashMap<Integer, HCria> crias;
 
     public Colonia() {
-        this.numObreras = 6000;
-        this.numSoldadosyCrias = 2000;
+        this.logger = new Logger();
+        this.invasorPresente = false;
+        this.obrerasPorGenerar = 6000;
+        this.soldadosyCriasPorGenerar = 2000;
         this.obrerasID = 1;
         this.soldadosID = 1;
         this.criasID = 1;
         this.iter = 0;
-        this.unidadesComida = new AtomicInteger();
+        this.unidadesComidaAlmacen = new AtomicInteger();
         this.unidadesComidaComedor = new AtomicInteger();
         this.tunelEntrada = new Semaphore(2, true);
         this.zonaDeComida = new Semaphore(10, true);
         this.obreras = new HashMap<>();
         this.soldados = new ConcurrentHashMap<>();
-        this.crias = new HashMap<>();
+        this.crias = new ConcurrentHashMap<>();
     }
 
-    public void invasion() {
-        System.out.println("¡Insecto invasor inminente!");
+    public void triggerInvasion() {
         HashMap<Integer, HSoldado> soldadosActuales = new HashMap<>(soldados);
 
-        invasionAgrupacion = new CyclicBarrier(soldadosActuales.size());
+        this.invasorRepelido = new CountDownLatch(soldadosActuales.size());
+        this.invasionAgrupacion = new CyclicBarrier(soldadosActuales.size());
+
+        new Thread(this::invasionManager).start();
+
+        System.out.println("Van a reaccionar " + soldadosActuales.size() + " soldados");
 
         for (HSoldado soldado : soldadosActuales.values()) {
             soldado.interrupt();
         }
+
+        for (HCria cria : crias.values()) {
+            cria.interrupt();
+        }
+    }
+
+    public void invasionManager() {
+        try {
+            this.invasorPresente = true;
+            System.out.println("¡Ha aparecido un invasor!");
+            invasorRepelido.await();
+        } catch (InterruptedException ignored) {
+        } finally {
+            this.invasorPresente = false;
+            System.out.println("¡El invasor ha sido repelido!\n");
+        }
     }
 
     public void repelerInvasor() throws BrokenBarrierException, InterruptedException {
-        System.out.println((invasionAgrupacion.getNumberWaiting() + 1) + " ready");
-        invasionAgrupacion.await();
+        this.invasionAgrupacion.await();
         Thread.sleep(20000);
+        this.invasorRepelido.countDown();
     }
 
     public void accederAlComedor(int min, int max, int comida) throws InterruptedException {
@@ -63,10 +84,10 @@ public class Colonia {
     public void accederAlAlmacen(int min, int max, int comida) throws InterruptedException {
         int tiempoAlmacenando = (int) (Math.random() * (max - min)) + min;
 
+        zonaDeComida.acquire();
         try {
-            zonaDeComida.acquire();
             Thread.sleep(tiempoAlmacenando);
-            unidadesComida.addAndGet(comida);
+            unidadesComidaAlmacen.addAndGet(comida);
 
             synchronized (this) {
                 notifyAll();
@@ -80,12 +101,12 @@ public class Colonia {
         int tiempoRecogiendo = (int) (Math.random() * (max - min)) + min;
 
         synchronized (this) {
-            while (this.unidadesComida.get() - comida < 0) {
+            while (this.unidadesComidaAlmacen.get() - comida < 0) {
                 wait();
             }
 
             Thread.sleep(tiempoRecogiendo);
-            this.unidadesComida.addAndGet(-comida);
+            this.unidadesComidaAlmacen.addAndGet(-comida);
         }
     }
 
@@ -95,21 +116,13 @@ public class Colonia {
         Thread.sleep(tiempoInstruccion);
     }
 
-    public void activarHormiwi(int id) {
-        HObrera hormiwi = obreras.get(id);
-        System.out.println(hormiwi.toString());
-        hormiwi.start();
-    }
-
-    public int numHormiwis() {
-        return obreras.size();
+    public void accederAlRefugio() throws InterruptedException {
+        invasorRepelido.await();
     }
 
     public void generarHormiga() {
         if (iter == 3) {
-            if (numSoldadosyCrias <= 0) {
-                return;
-            }
+            if (soldadosyCriasPorGenerar <= 0) return;
 
             System.out.println("Generando soldado y cria");
 
@@ -121,23 +134,21 @@ public class Colonia {
 
             soldadosID++;
             criasID++;
-            numSoldadosyCrias--;
+            soldadosyCriasPorGenerar--;
 
             iter = 0;
 
             hormigaS.start();
             hormigaC.start();
         } else {
-            if (numObreras <= 0) {
-                return;
-            }
+            if (obrerasPorGenerar <= 0) return;
 
             System.out.println("Generando obrera");
 
             HObrera hormiga = new HObrera(obrerasID, this);
             obreras.put(obrerasID, hormiga);
             obrerasID++;
-            numObreras--;
+            obrerasPorGenerar--;
 
             iter++;
 
@@ -160,5 +171,9 @@ public class Colonia {
             Thread.sleep(100);
         } catch (InterruptedException ignored) {
         }
+    }
+
+    public boolean hayInvasor() {
+        return this.invasorPresente;
     }
 }
