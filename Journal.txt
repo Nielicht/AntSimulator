@@ -15,7 +15,8 @@ Wednesday, 3rd of May
   invasor is repelled.
 
 Thursday, 4th of May
-- All ants types are done.
-- The baby ants refuge issue was solved.
-- Logging system implemented
-- GUI should be done for next day, javaFX or Sway?
+- All ants types are FINALLY done.
+- Baby ants are now perfectly capable of finding the refuge.
+- Surveillance cameras were installed everywhere, so now it's easier to catch SLACKING ants (logging system was
+  implemented).
+- I should start with the GUI implementation next session, so... FX or sway?
