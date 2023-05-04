@@ -9,18 +9,18 @@ public class HCria extends Thread {
     }
 
     private void descansar() throws InterruptedException {
+        colonia.logger.log("Hormiga cria " + this.id + " procede a descansar");
         colonia.descansar(4000, 4000);
     }
 
     private void comer() throws InterruptedException {
+        colonia.logger.log("Hormiga cria " + this.id + " procede a comer");
         colonia.accederAlComedor(3000, 5000, -1);
-        System.out.println("Hormiga " + this.id + " procedió a la comisión\n");
     }
 
     private void refugiarse() throws InterruptedException {
-        System.out.println("¡Hormiga " + this.id + " procedió a refugiarse!\n");
+        colonia.logger.log("Hormiga cria " + this.id + " procede a refugiarse");
         colonia.accederAlRefugio();
-        System.out.println("¡Hormiga " + this.id + " ha vuelto a la engordasion!\n");
     }
 
     @Override

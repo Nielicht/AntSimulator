@@ -34,14 +34,11 @@ public class Colonia {
 
     public void triggerInvasion() {
         HashMap<Integer, HSoldado> soldadosActuales = new HashMap<>(soldados);
-
         this.invasorRepelido = new CountDownLatch(soldadosActuales.size());
         this.invasionAgrupacion = new CyclicBarrier(soldadosActuales.size());
 
         new Thread(this::invasionManager).start();
-
-        System.out.println("Van a reaccionar " + soldadosActuales.size() + " soldados");
-
+        this.logger.log("Ha aparecido un invasor");
         for (HSoldado soldado : soldadosActuales.values()) {
             soldado.interrupt();
         }
@@ -54,12 +51,11 @@ public class Colonia {
     public void invasionManager() {
         try {
             this.invasorPresente = true;
-            System.out.println("¡Ha aparecido un invasor!");
             invasorRepelido.await();
         } catch (InterruptedException ignored) {
         } finally {
             this.invasorPresente = false;
-            System.out.println("¡El invasor ha sido repelido!\n");
+            this.logger.log("El invasor ha sido repelido");
         }
     }
 

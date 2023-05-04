@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Simulación comenzada\n");
 
         while (true) {
-            if (numHormiga == 150) colonia.triggerInvasion();
+            if (numHormiga == 20) colonia.triggerInvasion();
             int ratioGeneracion = (int) (Math.random() * 3000) + 500;
             Thread.sleep(ratioGeneracion);
             colonia.generarHormiga();

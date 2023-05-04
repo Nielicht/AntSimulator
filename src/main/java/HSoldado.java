@@ -14,7 +14,7 @@ public class HSoldado extends Thread {
 
     private void protegerColonia() {
         try {
-            System.out.println("¡Hormiga soldado " + id + " acude a repeler el invasor!");
+            colonia.logger.log("Hormiga soldado " + this.id + " acude a repeler al invasor");
             colonia.repelerInvasor();
         } catch (BrokenBarrierException e) {
             System.out.println("Algo fue mal con el cyclic barrier...");
@@ -24,16 +24,18 @@ public class HSoldado extends Thread {
     }
 
     private void instruccion() throws InterruptedException {
+        colonia.logger.log("Hormiga soldado " + this.id + " entra a la zona de instrucción");
         colonia.zonaDeInstruccion(2000, 8000);
     }
 
     private void descansar() throws InterruptedException {
+        colonia.logger.log("Hormiga soldado " + this.id + " entra a la zona de descanso");
         colonia.descansar(2000, 2000);
     }
 
     private void comer() throws InterruptedException {
+        colonia.logger.log("Hormiga soldado " + this.id + " procede a comer");
         colonia.accederAlComedor(3000, 3000, -1);
-        System.out.println("Hormiga " + this.id + " procedió a la comisión\n");
     }
 
     @Override
