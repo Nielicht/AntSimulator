@@ -1,3 +1,5 @@
+package Logica;
+
 public class HCria extends Thread {
 
     private String id;
@@ -10,17 +12,17 @@ public class HCria extends Thread {
 
     private void descansar() throws InterruptedException {
         colonia.logger.log("Hormiga cria " + this.id + " procede a descansar");
-        colonia.descansar(4000, 4000);
+        colonia.descansar(4000, 4000, this.id);
     }
 
     private void comer() throws InterruptedException {
         colonia.logger.log("Hormiga cria " + this.id + " procede a comer");
-        colonia.accederAlComedor(3000, 5000, -1);
+        colonia.accederAlComedor(3000, 5000, -1, this.id);
     }
 
     private void refugiarse() throws InterruptedException {
         colonia.logger.log("Hormiga cria " + this.id + " procede a refugiarse");
-        colonia.accederAlRefugio();
+        colonia.accederAlRefugio(this.id);
     }
 
     @Override

@@ -1,22 +1,42 @@
 [Start of records]
 
 Sunday, 30th of April
-- Soldier ants routine implemented.
-- You have to find a way to alert soldier ants of an insect invasion.
+- Soldier ants now do soldier things.
+- They still ignore their duties of protecting everyone when a giant insect passes by.
 
 Tuesday, 2nd of May
-- Reworked running code of Workers and Soldiers.
-- Soldier ants now respond to threatening insects, but cyclicBarrier seems to have problems with big amounts of Ants.
-- Baby ants should be done for next session
+- Brainwashed my worker and soldier ants, no more slacking.
+- Soldier ants do respond to threats, as they now do not know the concept of slacking. I fear I might gone too far
+  with my brainwashing process as they now are otherworldly stupid to know the concept of waiting for each other.
+- What my clown side meant with the previous statement is that cyclicbarrier is not working properly.
+- I should start making baby ants for next session.
 
 Wednesday, 3rd of May
-- Added the base for the baby ants behaviour.
-- I failed attempting to implement the Ants REFUGE behaviour. I must find a way to preferably sleep them until the
-  invasor is repelled.
+- Baby ants now go gugu gahgah.
+- They are too stupid to even save themselves when a big guy shows in the morning. I should make something that scoop
+  them to the refuge.
 
 Thursday, 4th of May
-- All ants types are FINALLY done.
-- Baby ants are now perfectly capable of finding the refuge.
+- All ants types are FINALLY in good shape.
+- Baby ants are now sufficiently sentient for finding the refuge.
 - Surveillance cameras were installed everywhere, so now it's easier to catch SLACKING ants (logging system was
   implemented).
-- I should start with the GUI implementation next session, so... FX or sway?
+- I should start making the nest a little prettier with GUI, either with FX or Sway.
+
+Friday, 5th of May
+- I chose JavaFX because imma a brave boy.
+- I am also a lazy boy today.
+
+Saturday, 6th of May
+- I regret choosing JavaFX.
+- WHY CANNOT I MODIFY MY GUI THINGS?!?! WHAT IS PLATFORM.RUNNABLE?!?!
+- WHY IS IT SO SLOW?!
+- :(
+- I think I am now in possession of the deep knowledge of the black magic known as maven.
+
+Sunday, 7th of May
+- I think I understand JavaFX now.
+- My application seems to fully work now.
+- Life is not a shade of black anymore.
+- I just found that worker ants are SO FAT that they get stuck in the storage room (synchronization deadlock).
+- >:(

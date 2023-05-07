@@ -1,20 +1,43 @@
+package Logica;
+
+import GUI.Interfaz;
+
 import java.util.HashMap;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Colonia {
+
+    // Logs
     public Logger logger;
+
+    // Misceláneo
     private boolean invasorPresente;
     private int obrerasPorGenerar, soldadosyCriasPorGenerar, obrerasID, soldadosID, criasID, iter;
+
+    // Sincronización
     private AtomicInteger unidadesComidaAlmacen, unidadesComidaComedor;
-    private Semaphore tunelEntrada, zonaDeComida;
+    private Semaphore tunelEntrada, limiteHormigasEnAlmacen;
     private CyclicBarrier invasionAgrupacion;
     private CountDownLatch invasorRepelido;
+
+    // Hormigas
     private HashMap<Integer, HObrera> obreras;
     private ConcurrentHashMap<Integer, HSoldado> soldados;
     private ConcurrentHashMap<Integer, HCria> crias;
 
-    public Colonia() {
+    // GUI
+    public CopyOnWriteArrayList<String> buscandoComida;
+    private CopyOnWriteArrayList<String> zonaDeAlmacenaje;
+    public CopyOnWriteArrayList<String> transportandoAlComedor;
+    public CopyOnWriteArrayList<String> zonaDeInstruccion;
+    public CopyOnWriteArrayList<String> zonaDeDescanso;
+    public CopyOnWriteArrayList<String> zonaParaComer;
+    private CopyOnWriteArrayList<String> zonaParaRefugiarse;
+    private CopyOnWriteArrayList<String> repeliendoInvasor;
+    public GUIUpdater guiUpdater;
+
+    public Colonia(Interfaz controlador) {
         this.logger = new Logger();
         this.invasorPresente = false;
         this.obrerasPorGenerar = 6000;
@@ -23,13 +46,27 @@ public class Colonia {
         this.soldadosID = 1;
         this.criasID = 1;
         this.iter = 0;
-        this.unidadesComidaAlmacen = new AtomicInteger();
-        this.unidadesComidaComedor = new AtomicInteger();
+        this.unidadesComidaAlmacen = new AtomicInteger(0);
+        this.unidadesComidaComedor = new AtomicInteger(0);
         this.tunelEntrada = new Semaphore(2, true);
-        this.zonaDeComida = new Semaphore(10, true);
+        this.limiteHormigasEnAlmacen = new Semaphore(10, true);
         this.obreras = new HashMap<>();
         this.soldados = new ConcurrentHashMap<>();
         this.crias = new ConcurrentHashMap<>();
+
+        this.buscandoComida = new CopyOnWriteArrayList<>();
+        this.zonaDeAlmacenaje = new CopyOnWriteArrayList<>();
+        this.transportandoAlComedor = new CopyOnWriteArrayList<>();
+        this.zonaDeInstruccion = new CopyOnWriteArrayList<>();
+        this.zonaDeDescanso = new CopyOnWriteArrayList<>();
+        this.zonaParaComer = new CopyOnWriteArrayList<>();
+        this.zonaParaRefugiarse = new CopyOnWriteArrayList<>();
+        this.repeliendoInvasor = new CopyOnWriteArrayList<>();
+        this.guiUpdater = new GUIUpdater(controlador, this);
+
+        Thread hiloGUIUpdater = new Thread(this.guiUpdater);
+        hiloGUIUpdater.setDaemon(true);
+        hiloGUIUpdater.start();
     }
 
     public void triggerInvasion() {
@@ -59,28 +96,35 @@ public class Colonia {
         }
     }
 
-    public void repelerInvasor() throws BrokenBarrierException, InterruptedException {
+    public void repelerInvasor(String id) throws BrokenBarrierException, InterruptedException {
+        this.repeliendoInvasor.add(id);
         this.invasionAgrupacion.await();
         Thread.sleep(20000);
         this.invasorRepelido.countDown();
+        this.repeliendoInvasor.remove(id);
     }
 
-    public void accederAlComedor(int min, int max, int comida) throws InterruptedException {
+    public void accederAlComedor(int min, int max, int comida, String id) throws InterruptedException {
         int tiempoAccedido = (int) (Math.random() * (max - min)) + min;
 
+        this.zonaParaComer.add(id);
         Thread.sleep(tiempoAccedido);
         unidadesComidaComedor.addAndGet(comida);
+        this.zonaParaComer.remove(id);
     }
 
-    public void descansar(int min, int max) throws InterruptedException {
+    public void descansar(int min, int max, String id) throws InterruptedException {
         int tiempoDescansando = (int) (Math.random() * (max - min)) + min;
+        this.zonaDeDescanso.add(id);
         Thread.sleep(tiempoDescansando);
+        this.zonaDeDescanso.remove(id);
     }
 
-    public void accederAlAlmacen(int min, int max, int comida) throws InterruptedException {
+    public void accederAlAlmacen(int min, int max, int comida, String id) throws InterruptedException {
         int tiempoAlmacenando = (int) (Math.random() * (max - min)) + min;
 
-        zonaDeComida.acquire();
+        limiteHormigasEnAlmacen.acquire();
+        this.zonaDeAlmacenaje.add(id);
         try {
             Thread.sleep(tiempoAlmacenando);
             unidadesComidaAlmacen.addAndGet(comida);
@@ -89,11 +133,12 @@ public class Colonia {
                 notifyAll();
             }
         } finally {
-            zonaDeComida.release();
+            limiteHormigasEnAlmacen.release();
+            this.zonaDeAlmacenaje.remove(id);
         }
     }
 
-    public void recogerDelAlmacen(int min, int max, int comida) throws InterruptedException {
+    public void recogerDelAlmacen(int min, int max, int comida, String id) throws InterruptedException {
         int tiempoRecogiendo = (int) (Math.random() * (max - min)) + min;
 
         synchronized (this) {
@@ -101,19 +146,30 @@ public class Colonia {
                 wait();
             }
 
-            Thread.sleep(tiempoRecogiendo);
-            this.unidadesComidaAlmacen.addAndGet(-comida);
+            limiteHormigasEnAlmacen.acquire();
+            this.zonaDeAlmacenaje.add(id);
+            try {
+                Thread.sleep(tiempoRecogiendo);
+                this.unidadesComidaAlmacen.addAndGet(-comida);
+            } finally {
+                limiteHormigasEnAlmacen.release();
+                this.zonaDeAlmacenaje.remove(id);
+            }
         }
     }
 
-    public void zonaDeInstruccion(int min, int max) throws InterruptedException {
+    public void zonaDeInstruccion(int min, int max, String id) throws InterruptedException {
         int tiempoInstruccion = (int) (Math.random() * (max - min)) + min;
 
+        this.zonaDeInstruccion.add(id);
         Thread.sleep(tiempoInstruccion);
+        this.zonaDeInstruccion.remove(id);
     }
 
-    public void accederAlRefugio() throws InterruptedException {
+    public void accederAlRefugio(String id) throws InterruptedException {
+        this.zonaParaRefugiarse.add(id);
         invasorRepelido.await();
+        this.zonaParaRefugiarse.remove(id);
     }
 
     public void generarHormiga() {
@@ -171,5 +227,22 @@ public class Colonia {
 
     public boolean hayInvasor() {
         return this.invasorPresente;
+    }
+
+    public Object[] recolectarDatos() {
+        Object[] datos = new Object[10];
+
+        datos[0] = this.buscandoComida;
+        datos[1] = this.zonaDeAlmacenaje;
+        datos[2] = this.transportandoAlComedor;
+        datos[3] = this.zonaDeInstruccion;
+        datos[4] = this.zonaDeDescanso;
+        datos[5] = this.zonaParaComer;
+        datos[6] = this.zonaParaRefugiarse;
+        datos[7] = this.repeliendoInvasor;
+        datos[8] = this.unidadesComidaAlmacen;
+        datos[9] = this.unidadesComidaComedor;
+
+        return datos;
     }
 }

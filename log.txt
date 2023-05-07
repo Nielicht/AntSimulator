@@ -1,0 +1,990 @@
+{Inicio log}
+
+2023-05-07 13:20:11, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:20:14, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:20:15, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:20:17, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:20:18, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:20:18, Hormiga cria HC0001 procede a comer
+2023-05-07 13:20:18, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:20:20, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:20:20, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:20:21, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:20:21, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:20:21, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:22, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:20:22, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:20:23, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:20:23, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:20:24, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:20:25, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:20:25, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:20:26, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:20:26, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:20:27, Hormiga cria HC0001 procede a comer
+2023-05-07 13:20:28, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:20:28, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:20:28, Hormiga cria HC0002 procede a comer
+2023-05-07 13:20:29, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:20:29, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:30, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:20:30, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:20:30, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:30, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:20:31, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:20:31, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:20:31, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:20:32, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:20:32, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:20:32, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:20:32, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:20:32, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:20:33, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:20:33, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:20:34, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:20:34, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:34, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:20:35, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:20:35, Hormiga cria HC0001 procede a comer
+2023-05-07 13:20:35, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:20:36, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:20:36, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:20:36, Hormiga cria HC0003 procede a comer
+2023-05-07 13:20:36, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:20:36, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:36, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:20:36, Hormiga cria HC0002 procede a comer
+2023-05-07 13:20:37, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:20:37, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:20:37, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:20:37, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:20:38, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:20:39, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:20:39, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:20:39, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:20:39, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:20:39, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:20:40, Hormiga obrera HO0011 sale a recoger comida
+2023-05-07 13:20:40, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:20:40, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:41, Hormiga obrera HO0010 se dispone a ir hacia el comedor
+2023-05-07 13:20:41, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:20:41, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:20:41, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:20:42, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:20:42, Hormiga obrera HO0010 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:42, Hormiga obrera HO0012 entra al almacen a recoger comida
+2023-05-07 13:20:42, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:20:42, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:20:42, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:20:42, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:20:42, Hormiga cria HC0001 procede a comer
+2023-05-07 13:20:43, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:20:43, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:20:43, Hormiga cria HC0004 procede a comer
+2023-05-07 13:20:43, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:20:43, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:20:44, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:20:44, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:20:44, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:45, Hormiga obrera HO0011 entra al almacen a almacenar comida
+2023-05-07 13:20:45, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:20:45, Hormiga obrera HO0013 sale a recoger comida
+2023-05-07 13:20:45, Hormiga cria HC0002 procede a comer
+2023-05-07 13:20:45, Hormiga cria HC0003 procede a comer
+2023-05-07 13:20:45, Hormiga obrera HO0012 se dispone a ir hacia el comedor
+2023-05-07 13:20:45, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:20:46, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:46, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:20:46, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:20:46, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:20:47, Hormiga obrera HO0014 entra al almacen a recoger comida
+2023-05-07 13:20:47, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:20:47, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:20:47, Ha aparecido un invasor
+2023-05-07 13:20:47, Hormiga soldado HS0002 acude a repeler al invasor
+2023-05-07 13:20:47, Hormiga soldado HS0001 acude a repeler al invasor
+2023-05-07 13:20:47, Hormiga soldado HS0003 acude a repeler al invasor
+2023-05-07 13:20:47, Hormiga cria HC0004 procede a refugiarse
+2023-05-07 13:20:47, Hormiga cria HC0001 procede a refugiarse
+2023-05-07 13:20:47, Hormiga cria HC0002 procede a refugiarse
+2023-05-07 13:20:47, Hormiga cria HC0003 procede a refugiarse
+2023-05-07 13:20:47, Hormiga soldado HS0004 acude a repeler al invasor
+2023-05-07 13:20:47, Hormiga obrera HO0015 sale a recoger comida
+2023-05-07 13:20:47, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:20:47, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:20:48, Hormiga obrera HO0011 sale a recoger comida
+2023-05-07 13:20:48, Hormiga obrera HO0012 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:49, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:49, Hormiga obrera HO0013 entra al almacen a almacenar comida
+2023-05-07 13:20:49, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:20:49, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:20:49, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:20:49, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:20:49, Hormiga cria HC0005 procede a refugiarse
+2023-05-07 13:20:50, Hormiga obrera HO0012 entra al almacen a recoger comida
+2023-05-07 13:20:50, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:20:51, Hormiga obrera HO0014 se dispone a ir hacia el comedor
+2023-05-07 13:20:52, Hormiga obrera HO0015 entra al almacen a almacenar comida
+2023-05-07 13:20:52, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:52, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:20:52, Hormiga obrera HO0014 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:53, Hormiga obrera HO0016 entra al almacen a recoger comida
+2023-05-07 13:20:53, Hormiga obrera HO0010 se dispone a ir hacia el comedor
+2023-05-07 13:20:53, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:20:53, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:20:54, Hormiga obrera HO0014 entra al almacen a recoger comida
+2023-05-07 13:20:54, Hormiga obrera HO0017 sale a recoger comida
+2023-05-07 13:20:54, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:54, Hormiga obrera HO0010 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:55, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:20:55, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:20:55, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:20:55, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:20:56, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:20:57, Hormiga obrera HO0014 se dispone a ir hacia el comedor
+2023-05-07 13:20:57, Hormiga obrera HO0018 entra al almacen a recoger comida
+2023-05-07 13:20:57, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:20:59, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:20:59, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:20:59, Hormiga cria HC0006 procede a refugiarse
+2023-05-07 13:20:59, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:20:59, Hormiga obrera HO0017 entra al almacen a almacenar comida
+2023-05-07 13:20:59, Hormiga obrera HO0014 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:00, Hormiga obrera HO0016 se dispone a ir hacia el comedor
+2023-05-07 13:21:00, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:21:00, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:21:00, Hormiga obrera HO0013 sale a recoger comida
+2023-05-07 13:21:00, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:21:00, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:00, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:21:00, Hormiga obrera HO0015 sale a recoger comida
+2023-05-07 13:21:01, Hormiga obrera HO0014 entra al almacen a recoger comida
+2023-05-07 13:21:01, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:21:01, Hormiga obrera HO0016 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:02, Hormiga obrera HO0019 sale a recoger comida
+2023-05-07 13:21:02, Hormiga obrera HO0016 entra al almacen a recoger comida
+2023-05-07 13:21:02, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:03, Hormiga obrera HO0017 sale a recoger comida
+2023-05-07 13:21:03, Hormiga obrera HO0020 entra al almacen a recoger comida
+2023-05-07 13:21:04, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:21:04, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga obrera HO0011 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga obrera HO0013 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:21:04, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:04, Hormiga obrera HO0015 entra al almacen a almacenar comida
+2023-05-07 13:21:05, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:06, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:21:06, Hormiga obrera HO0019 entra al almacen a almacenar comida
+2023-05-07 13:21:06, Hormiga obrera HO0021 sale a recoger comida
+2023-05-07 13:21:07, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:07, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:07, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:07, Hormiga cria HC0007 procede a refugiarse
+2023-05-07 13:21:07, Hormiga obrera HO0020 se dispone a ir hacia el comedor
+2023-05-07 13:21:07, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:21:07, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:21:07, Hormiga obrera HO0011 sale a recoger comida
+2023-05-07 13:21:07, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:07, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:07, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:07, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:07, El invasor ha sido repelido
+2023-05-07 13:21:07, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:07, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:07, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:07, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:07, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:07, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:07, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:08, Hormiga obrera HO0017 entra al almacen a almacenar comida
+2023-05-07 13:21:08, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:21:09, Hormiga obrera HO0010 se dispone a ir hacia el comedor
+2023-05-07 13:21:09, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:09, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:09, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:10, Hormiga obrera HO0020 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:10, Hormiga obrera HO0018 se dispone a ir hacia el comedor
+2023-05-07 13:21:10, Hormiga obrera HO0022 entra al almacen a recoger comida
+2023-05-07 13:21:10, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:10, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:11, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:11, Hormiga obrera HO0020 entra al almacen a recoger comida
+2023-05-07 13:21:11, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:11, Hormiga obrera HO0023 sale a recoger comida
+2023-05-07 13:21:11, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:11, Hormiga obrera HO0018 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:11, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:11, Hormiga obrera HO0021 entra al almacen a almacenar comida
+2023-05-07 13:21:11, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:21:11, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:11, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:21:11, Hormiga obrera HO0010 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:11, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:11, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:21:12, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:21:12, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:21:12, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:12, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:12, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:12, Hormiga obrera HO0018 entra al almacen a recoger comida
+2023-05-07 13:21:13, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:21:13, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:21:13, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:13, Hormiga obrera HO0024 entra al almacen a recoger comida
+2023-05-07 13:21:13, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:14, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:14, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:14, Hormiga cria HC0008 procede a comer
+2023-05-07 13:21:14, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:14, Hormiga obrera HO0012 se dispone a ir hacia el comedor
+2023-05-07 13:21:14, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:14, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:14, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:21:14, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:15, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:15, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:15, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:15, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:16, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:16, Hormiga obrera HO0014 se dispone a ir hacia el comedor
+2023-05-07 13:21:16, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:16, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:17, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:17, Hormiga obrera HO0012 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:17, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:21:17, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:18, Hormiga obrera HO0025 sale a recoger comida
+2023-05-07 13:21:18, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:21:18, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:21:18, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:18, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:18, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:18, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:18, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:18, Hormiga obrera HO0014 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:18, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:21:18, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:18, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:18, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:19, Hormiga obrera HO0012 entra al almacen a recoger comida
+2023-05-07 13:21:19, Hormiga obrera HO0026 entra al almacen a recoger comida
+2023-05-07 13:21:19, Hormiga obrera HO0016 se dispone a ir hacia el comedor
+2023-05-07 13:21:19, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:21:19, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:21:19, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:19, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:20, Hormiga obrera HO0027 sale a recoger comida
+2023-05-07 13:21:20, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:20, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:20, Hormiga obrera HO0014 entra al almacen a recoger comida
+2023-05-07 13:21:20, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:20, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:21:21, Hormiga obrera HO0016 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:21, Hormiga obrera HO0026 se dispone a ir hacia el comedor
+2023-05-07 13:21:21, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:21, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:22, Hormiga cria HC0008 procede a comer
+2023-05-07 13:21:22, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:21:22, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:22, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:22, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:22, Hormiga obrera HO0016 entra al almacen a recoger comida
+2023-05-07 13:21:22, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:22, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:22, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:22, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:22, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:22, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:21:22, Hormiga cria HC0009 procede a comer
+2023-05-07 13:21:22, Hormiga obrera HO0012 se dispone a ir hacia el comedor
+2023-05-07 13:21:22, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:22, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:23, Hormiga obrera HO0026 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:23, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:23, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:23, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:24, Hormiga soldado HS0001 procede a comer
+2023-05-07 13:21:24, Hormiga obrera HO0012 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:24, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:24, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:24, Hormiga obrera HO0026 entra al almacen a recoger comida
+2023-05-07 13:21:24, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:21:24, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:21:24, Hormiga obrera HO0017 sale a recoger comida
+2023-05-07 13:21:24, Hormiga obrera HO0021 sale a recoger comida
+2023-05-07 13:21:25, Hormiga obrera HO0019 sale a recoger comida
+2023-05-07 13:21:25, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:21:25, Hormiga obrera HO0015 sale a recoger comida
+2023-05-07 13:21:25, Hormiga obrera HO0013 sale a recoger comida
+2023-05-07 13:21:25, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:21:25, Hormiga soldado HS0002 procede a comer
+2023-05-07 13:21:25, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:21:25, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:21:26, Hormiga obrera HO0012 entra al almacen a recoger comida
+2023-05-07 13:21:26, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:26, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:26, Hormiga obrera HO0028 entra al almacen a recoger comida
+2023-05-07 13:21:26, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:21:26, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:26, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:26, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:26, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:26, Hormiga obrera HO0025 entra al almacen a almacenar comida
+2023-05-07 13:21:26, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:21:27, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:27, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:21:27, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:28, Hormiga obrera HO0029 sale a recoger comida
+2023-05-07 13:21:28, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:28, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:28, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:21:28, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:28, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:21:28, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:21:28, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:21:29, Hormiga obrera HO0023 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga obrera HO0019 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:29, Hormiga obrera HO0011 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:29, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga cria HC0008 procede a comer
+2023-05-07 13:21:29, Hormiga obrera HO0013 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga obrera HO0015 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga cria HC0009 procede a comer
+2023-05-07 13:21:29, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:21:29, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:21:29, Hormiga obrera HO0021 entra al almacen a almacenar comida
+2023-05-07 13:21:30, Hormiga obrera HO0017 entra al almacen a almacenar comida
+2023-05-07 13:21:30, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:30, Hormiga obrera HO0027 entra al almacen a almacenar comida
+2023-05-07 13:21:30, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:30, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:30, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:30, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:30, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:30, Hormiga obrera HO0025 sale a recoger comida
+2023-05-07 13:21:30, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:30, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:30, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:31, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:31, Hormiga obrera HO0030 entra al almacen a recoger comida
+2023-05-07 13:21:31, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:21:31, Hormiga cria HC0010 procede a comer
+2023-05-07 13:21:31, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:21:32, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:32, Hormiga obrera HO0029 entra al almacen a almacenar comida
+2023-05-07 13:21:32, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:33, Hormiga obrera HO0031 sale a recoger comida
+2023-05-07 13:21:33, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:21:34, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:34, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:21:34, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:21:34, Hormiga soldado HS0005 procede a comer
+2023-05-07 13:21:34, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:34, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:21:34, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:34, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:34, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:35, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:35, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:35, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:35, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:35, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:21:35, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:35, Hormiga obrera HO0032 entra al almacen a recoger comida
+2023-05-07 13:21:36, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:21:36, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:21:36, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:21:36, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:21:36, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:36, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:37, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:37, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:21:37, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:37, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:37, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:38, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:38, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:38, Hormiga cria HC0008 procede a comer
+2023-05-07 13:21:38, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:38, Hormiga cria HC0009 procede a comer
+2023-05-07 13:21:38, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:38, Hormiga obrera HO0033 sale a recoger comida
+2023-05-07 13:21:38, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:21:39, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:39, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:21:39, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:39, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:39, Hormiga soldado HS0003 procede a comer
+2023-05-07 13:21:39, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:40, Hormiga cria HC0010 procede a comer
+2023-05-07 13:21:40, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:40, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:40, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:21:40, Hormiga cria HC0011 procede a comer
+2023-05-07 13:21:40, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:21:41, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:41, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:21:41, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:41, Hormiga obrera HO0034 entra al almacen a recoger comida
+2023-05-07 13:21:42, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:21:42, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:42, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:42, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:42, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:21:42, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:42, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:42, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:42, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:21:42, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:42, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:21:43, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:43, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:43, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:21:43, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:21:43, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:44, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:44, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:44, Hormiga soldado HS0007 procede a comer
+2023-05-07 13:21:44, Hormiga cria HC0011 procede a descansar
+2023-05-07 13:21:44, Hormiga soldado HS0011 entra a la zona de descanso
+2023-05-07 13:21:44, Hormiga obrera HO0035 sale a recoger comida
+2023-05-07 13:21:45, Hormiga obrera HO0036 entra al almacen a recoger comida
+2023-05-07 13:21:45, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:21:46, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:46, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:46, Hormiga soldado HS0006 procede a comer
+2023-05-07 13:21:46, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:46, Hormiga cria HC0009 procede a comer
+2023-05-07 13:21:46, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:21:46, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:46, Hormiga soldado HS0012 entra a la zona de instrucción
+2023-05-07 13:21:46, Hormiga cria HC0012 procede a comer
+2023-05-07 13:21:46, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:21:46, Hormiga cria HC0008 procede a comer
+2023-05-07 13:21:46, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:21:46, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:46, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:47, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:47, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:47, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:47, Hormiga cria HC0010 procede a comer
+2023-05-07 13:21:47, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:21:47, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:47, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:48, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:48, Hormiga cria HC0011 procede a comer
+2023-05-07 13:21:48, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:48, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:21:49, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:49, Hormiga soldado HS0012 entra a la zona de descanso
+2023-05-07 13:21:49, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:49, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:49, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:49, Hormiga obrera HO0037 sale a recoger comida
+2023-05-07 13:21:49, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:49, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:49, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:21:49, Hormiga cria HC0012 procede a descansar
+2023-05-07 13:21:50, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:50, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:21:50, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:21:50, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:50, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:51, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:51, Hormiga soldado HS0012 entra a la zona de instrucción
+2023-05-07 13:21:51, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:21:51, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:21:51, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:51, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:21:51, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:51, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:21:51, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:21:52, Hormiga cria HC0011 procede a descansar
+2023-05-07 13:21:52, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:52, Hormiga obrera HO0038 entra al almacen a recoger comida
+2023-05-07 13:21:52, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:21:52, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:53, Hormiga soldado HS0011 entra a la zona de descanso
+2023-05-07 13:21:53, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:21:53, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:53, Hormiga obrera HO0039 sale a recoger comida
+2023-05-07 13:21:53, Hormiga cria HC0005 procede a comer
+2023-05-07 13:21:53, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:21:53, Hormiga cria HC0001 procede a comer
+2023-05-07 13:21:53, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:53, Hormiga cria HC0009 procede a comer
+2023-05-07 13:21:53, Hormiga cria HC0012 procede a comer
+2023-05-07 13:21:53, Hormiga soldado HS0004 procede a comer
+2023-05-07 13:21:54, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:54, Hormiga cria HC0008 procede a comer
+2023-05-07 13:21:54, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:21:54, Hormiga soldado HS0008 procede a comer
+2023-05-07 13:21:54, Hormiga cria HC0010 procede a comer
+2023-05-07 13:21:54, Hormiga soldado HS0013 entra a la zona de instrucción
+2023-05-07 13:21:54, Hormiga cria HC0013 procede a comer
+2023-05-07 13:21:54, Hormiga cria HC0006 procede a comer
+2023-05-07 13:21:54, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:21:54, Hormiga cria HC0003 procede a comer
+2023-05-07 13:21:54, Hormiga soldado HS0012 entra a la zona de descanso
+2023-05-07 13:21:55, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:21:55, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:21:55, Hormiga cria HC0004 procede a comer
+2023-05-07 13:21:55, Hormiga cria HC0002 procede a comer
+2023-05-07 13:21:55, Hormiga cria HC0007 procede a comer
+2023-05-07 13:21:55, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:21:56, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:21:56, Hormiga cria HC0011 procede a comer
+2023-05-07 13:21:56, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:21:56, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:21:56, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:21:56, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:21:56, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:21:56, Hormiga soldado HS0012 entra a la zona de instrucción
+2023-05-07 13:21:57, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:21:57, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:21:58, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:21:58, Hormiga cria HC0012 procede a descansar
+2023-05-07 13:21:58, Hormiga soldado HS0013 entra a la zona de descanso
+2023-05-07 13:21:58, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:21:58, Hormiga obrera HO0040 entra al almacen a recoger comida
+2023-05-07 13:21:58, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:21:58, Hormiga soldado HS0009 procede a comer
+2023-05-07 13:21:58, Hormiga cria HC0013 procede a descansar
+2023-05-07 13:21:58, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:21:58, Hormiga soldado HS0011 entra a la zona de descanso
+2023-05-07 13:21:58, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:21:58, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:21:58, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:21:59, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:21:59, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:21:59, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:21:59, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:21:59, Hormiga cria HC0011 procede a descansar
+2023-05-07 13:21:59, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:21:59, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:21:59, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:22:00, Hormiga soldado HS0013 entra a la zona de instrucción
+2023-05-07 13:22:00, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:22:00, Hormiga obrera HO0041 sale a recoger comida
+2023-05-07 13:22:00, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:22:00, Hormiga soldado HS0012 entra a la zona de descanso
+2023-05-07 13:22:00, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:22:00, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:22:01, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:22:01, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:22:01, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:22:01, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:22:01, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:22:02, Hormiga cria HC0009 procede a comer
+2023-05-07 13:22:02, Hormiga cria HC0012 procede a comer
+2023-05-07 13:22:02, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:22:02, Hormiga cria HC0006 procede a comer
+2023-05-07 13:22:02, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:22:02, Hormiga cria HC0005 procede a comer
+2023-05-07 13:22:02, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:22:02, Hormiga cria HC0013 procede a comer
+2023-05-07 13:22:02, Hormiga soldado HS0012 entra a la zona de instrucción
+2023-05-07 13:22:02, Hormiga cria HC0001 procede a comer
+2023-05-07 13:22:02, Hormiga cria HC0008 procede a comer
+2023-05-07 13:22:02, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:22:03, Hormiga cria HC0010 procede a comer
+2023-05-07 13:22:03, Hormiga cria HC0003 procede a comer
+2023-05-07 13:22:03, Hormiga obrera HO0042 entra al almacen a recoger comida
+2023-05-07 13:22:03, Hormiga cria HC0011 procede a comer
+2023-05-07 13:22:03, Hormiga cria HC0002 procede a comer
+2023-05-07 13:22:03, Hormiga cria HC0004 procede a comer
+2023-05-07 13:22:03, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:22:03, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:22:03, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:22:04, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:22:04, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:22:04, Hormiga cria HC0007 procede a comer
+2023-05-07 13:22:04, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:22:05, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:22:05, Hormiga cria HC0012 procede a descansar
+2023-05-07 13:22:05, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:22:05, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:22:06, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:22:06, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:22:06, Hormiga cria HC0013 procede a descansar
+2023-05-07 13:22:06, Hormiga soldado HS0013 entra a la zona de descanso
+2023-05-07 13:22:06, Hormiga soldado HS0011 entra a la zona de descanso
+2023-05-07 13:22:06, Hormiga soldado HS0014 entra a la zona de instrucción
+2023-05-07 13:22:06, Hormiga cria HC0014 procede a comer
+2023-05-07 13:22:06, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:22:06, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:22:06, Hormiga cria HC0011 procede a descansar
+2023-05-07 13:22:06, Hormiga soldado HS0001 procede a comer
+2023-05-07 13:22:06, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:22:07, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:22:07, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:22:07, Hormiga soldado HS0012 entra a la zona de descanso
+2023-05-07 13:22:07, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:22:07, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:22:07, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:22:07, Hormiga obrera HO0043 sale a recoger comida
+2023-05-07 13:22:07, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:22:07, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:22:07, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:22:08, Hormiga soldado HS0013 entra a la zona de instrucción
+2023-05-07 13:22:08, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:22:08, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:22:08, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:22:08, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:22:08, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:22:08, Hormiga obrera HO0044 entra al almacen a recoger comida
+2023-05-07 13:22:08, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:22:09, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:22:09, Hormiga soldado HS0012 entra a la zona de instrucción
+2023-05-07 13:22:09, Hormiga cria HC0012 procede a comer
+2023-05-07 13:22:09, Hormiga soldado HS0010 procede a comer
+2023-05-07 13:22:09, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:22:09, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:22:09, Hormiga soldado HS0002 procede a comer
+2023-05-07 13:22:10, Hormiga cria HC0006 procede a comer
+2023-05-07 13:22:10, Hormiga cria HC0001 procede a comer
+2023-05-07 13:22:10, Hormiga cria HC0013 procede a comer
+2023-05-07 13:22:10, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:22:10, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:22:10, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:22:10, Hormiga cria HC0008 procede a comer
+2023-05-07 13:22:10, Hormiga cria HC0009 procede a comer
+2023-05-07 13:22:10, Hormiga cria HC0011 procede a comer
+2023-05-07 13:22:10, Hormiga cria HC0014 procede a descansar
+2023-05-07 13:22:10, Hormiga obrera HO0045 sale a recoger comida
+2023-05-07 13:22:11, Hormiga cria HC0005 procede a comer
+2023-05-07 13:22:11, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:22:11, Hormiga cria HC0002 procede a comer
+2023-05-07 13:22:11, Hormiga cria HC0010 procede a comer
+2023-05-07 13:22:11, Hormiga cria HC0003 procede a comer
+2023-05-07 13:22:12, Hormiga cria HC0004 procede a comer
+2023-05-07 13:22:12, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:22:12, Hormiga soldado HS0015 entra a la zona de instrucción
+2023-05-07 13:22:12, Hormiga cria HC0015 procede a comer
+2023-05-07 13:22:12, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:22:12, Hormiga soldado HS0014 entra a la zona de descanso
+2023-05-07 13:22:12, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:22:12, Hormiga cria HC0007 procede a comer
+2023-05-07 13:22:12, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:22:12, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:22:13, Hormiga cria HC0012 procede a descansar
+2023-05-07 13:22:13, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:22:13, Hormiga cria HC0013 procede a descansar
+2023-05-07 13:22:13, Hormiga soldado HS0013 entra a la zona de descanso
+2023-05-07 13:22:13, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:22:14, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:22:14, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:22:14, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:22:14, Hormiga soldado HS0012 entra a la zona de descanso
+2023-05-07 13:22:14, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:22:14, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:22:14, Hormiga soldado HS0014 entra a la zona de instrucción
+2023-05-07 13:22:14, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:22:14, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:22:14, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:22:14, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:22:14, Hormiga obrera HO0046 entra al almacen a recoger comida
+2023-05-07 13:22:14, Hormiga cria HC0014 procede a comer
+2023-05-07 13:22:14, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:22:15, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:22:15, Hormiga soldado HS0011 entra a la zona de descanso
+2023-05-07 13:22:15, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:22:15, Hormiga cria HC0015 procede a descansar
+2023-05-07 13:22:15, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:22:15, Hormiga cria HC0011 procede a descansar
+2023-05-07 13:22:15, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:22:15, Hormiga soldado HS0013 entra a la zona de instrucción
+2023-05-07 13:22:15, Hormiga soldado HS0005 procede a comer
+2023-05-07 13:22:16, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:22:16, Hormiga soldado HS0012 entra a la zona de instrucción
+2023-05-07 13:22:16, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:22:16, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:22:16, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:22:16, Hormiga soldado HS0003 procede a comer
+2023-05-07 13:22:16, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:22:16, Hormiga soldado HS0007 entra a la zona de descanso
+2023-05-07 13:22:17, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:22:17, Hormiga cria HC0012 procede a comer
+2023-05-07 13:22:17, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:22:17, Hormiga soldado HS0015 entra a la zona de descanso
+2023-05-07 13:22:17, Hormiga cria HC0013 procede a comer
+2023-05-07 13:22:17, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:22:18, Hormiga obrera HO0047 sale a recoger comida
+2023-05-07 13:22:18, Hormiga cria HC0001 procede a comer
+2023-05-07 13:22:18, Hormiga cria HC0005 procede a comer
+2023-05-07 13:22:18, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:22:18, Hormiga soldado HS0014 entra a la zona de descanso
+2023-05-07 13:22:18, Hormiga cria HC0009 procede a comer
+2023-05-07 13:22:18, Hormiga cria HC0008 procede a comer
+2023-05-07 13:22:18, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:22:18, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:22:18, Hormiga cria HC0006 procede a comer
+2023-05-07 13:22:18, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:22:18, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:22:18, Hormiga cria HC0002 procede a comer
+2023-05-07 13:22:18, Hormiga soldado HS0007 procede a comer
+2023-05-07 13:22:19, Hormiga cria HC0003 procede a comer
+2023-05-07 13:22:19, Hormiga soldado HS0013 entra a la zona de descanso
+2023-05-07 13:22:19, Hormiga cria HC0010 procede a comer
+2023-05-07 13:22:19, Hormiga cria HC0014 procede a descansar
+2023-05-07 13:22:19, Hormiga cria HC0015 procede a comer
+2023-05-07 13:22:19, Hormiga soldado HS0008 entra a la zona de instrucción
+2023-05-07 13:22:19, Hormiga soldado HS0015 entra a la zona de instrucción
+2023-05-07 13:22:19, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:22:19, Hormiga cria HC0011 procede a comer
+2023-05-07 13:22:19, Hormiga cria HC0007 procede a comer
+2023-05-07 13:22:19, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:22:20, Hormiga soldado HS0011 entra a la zona de descanso
+2023-05-07 13:22:20, Hormiga soldado HS0014 entra a la zona de instrucción
+2023-05-07 13:22:20, Hormiga cria HC0004 procede a comer
+2023-05-07 13:22:20, Hormiga cria HC0012 procede a descansar
+2023-05-07 13:22:20, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:22:21, Hormiga soldado HS0009 entra a la zona de descanso
+2023-05-07 13:22:21, Hormiga soldado HS0013 entra a la zona de instrucción
+2023-05-07 13:22:21, Hormiga obrera HO0048 entra al almacen a recoger comida
+2023-05-07 13:22:21, Hormiga soldado HS0004 entra a la zona de descanso
+2023-05-07 13:22:21, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:22:21, Hormiga cria HC0005 procede a descansar
+2023-05-07 13:22:21, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:22:22, Hormiga soldado HS0016 entra a la zona de instrucción
+2023-05-07 13:22:22, Hormiga cria HC0016 procede a comer
+2023-05-07 13:22:22, Hormiga soldado HS0012 entra a la zona de descanso
+2023-05-07 13:22:22, Hormiga soldado HS0011 procede a comer
+2023-05-07 13:22:22, Hormiga cria HC0015 procede a descansar
+2023-05-07 13:22:22, Hormiga cria HC0010 procede a descansar
+2023-05-07 13:22:22, Hormiga cria HC0013 procede a descansar
+2023-05-07 13:22:22, Hormiga soldado HS0010 entra a la zona de descanso
+2023-05-07 13:22:22, Hormiga cria HC0009 procede a descansar
+2023-05-07 13:22:22, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:22:23, Hormiga cria HC0007 procede a descansar
+2023-05-07 13:22:23, Hormiga soldado HS0009 entra a la zona de instrucción
+2023-05-07 13:22:23, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:22:23, Hormiga cria HC0008 procede a descansar
+2023-05-07 13:22:23, Hormiga cria HC0006 procede a descansar
+2023-05-07 13:22:23, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:22:23, Hormiga cria HC0014 procede a comer
+2023-05-07 13:22:23, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:22:23, Hormiga cria HC0011 procede a descansar
+2023-05-07 13:22:23, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:22:23, Hormiga soldado HS0014 entra a la zona de descanso
+2023-05-07 13:22:23, Hormiga soldado HS0008 entra a la zona de descanso
+2023-05-07 13:22:24, Hormiga soldado HS0012 procede a comer
+2023-05-07 13:22:24, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:22:24, Hormiga soldado HS0010 entra a la zona de instrucción
+2023-05-07 13:22:24, Hormiga cria HC0012 procede a comer
+2023-05-07 13:22:24, Hormiga obrera HO0049 sale a recoger comida
+2023-05-07 13:22:25, Hormiga soldado HS0011 entra a la zona de instrucción
+2023-05-07 13:22:25, Hormiga soldado HS0003 entra a la zona de instrucción
+{Inicio log}
+
+2023-05-07 13:22:32, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:22:34, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:22:36, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:22:36, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:22:38, Hormiga cria HC0001 procede a comer
+2023-05-07 13:22:38, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:22:39, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:22:40, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:22:40, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:22:41, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:22:41, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:22:42, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:22:43, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:22:44, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:22:44, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:22:45, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:22:45, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:22:45, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:22:45, Hormiga cria HC0001 procede a comer
+2023-05-07 13:22:45, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:22:46, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:22:47, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:22:47, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:22:48, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:22:49, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:22:49, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:22:49, Hormiga cria HC0002 procede a comer
+2023-05-07 13:22:49, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:22:50, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:22:50, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:22:50, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:22:50, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:22:51, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:22:52, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:22:52, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:22:53, Hormiga cria HC0001 procede a comer
+2023-05-07 13:22:53, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:22:53, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:22:53, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:22:54, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:22:54, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:22:54, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:22:54, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:22:55, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:22:55, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:22:55, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:22:56, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:22:56, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:22:56, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:22:56, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:22:56, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:22:57, Hormiga cria HC0002 procede a comer
+2023-05-07 13:22:57, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:22:57, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:22:57, Hormiga cria HC0003 procede a comer
+2023-05-07 13:22:57, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:22:58, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:22:59, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:22:59, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:22:59, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:23:00, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:23:00, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:23:00, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:23:00, Hormiga obrera HO0011 sale a recoger comida
+2023-05-07 13:23:00, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:23:00, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:23:00, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:23:01, Hormiga cria HC0001 procede a comer
+2023-05-07 13:23:01, Hormiga obrera HO0010 se dispone a ir hacia el comedor
+2023-05-07 13:23:02, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:23:02, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:23:02, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:23:02, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:23:02, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:23:02, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:03, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:23:03, Hormiga obrera HO0012 entra al almacen a recoger comida
+2023-05-07 13:23:04, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:23:04, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:23:04, Hormiga obrera HO0011 entra al almacen a almacenar comida
+2023-05-07 13:23:04, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:23:04, Hormiga obrera HO0010 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:04, Hormiga soldado HS0004 entra a la zona de instrucción
+2023-05-07 13:23:04, Hormiga cria HC0004 procede a comer
+2023-05-07 13:23:05, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:05, Hormiga cria HC0001 procede a descansar
+2023-05-07 13:23:05, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:23:06, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:23:06, Hormiga cria HC0002 procede a comer
+2023-05-07 13:23:06, Hormiga cria HC0003 procede a comer
+2023-05-07 13:23:06, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:23:06, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:23:06, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:23:06, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:23:07, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:23:07, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:07, Hormiga obrera HO0013 sale a recoger comida
+2023-05-07 13:23:07, Hormiga obrera HO0011 sale a recoger comida
+2023-05-07 13:23:08, Hormiga soldado HS0003 entra a la zona de descanso
+2023-05-07 13:23:08, Hormiga cria HC0004 procede a descansar
+2023-05-07 13:23:08, Hormiga soldado HS0001 entra a la zona de descanso
+2023-05-07 13:23:08, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:09, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:23:09, Hormiga cria HC0002 procede a descansar
+2023-05-07 13:23:09, Hormiga soldado HS0002 entra a la zona de descanso
+2023-05-07 13:23:09, Hormiga cria HC0001 procede a comer
+2023-05-07 13:23:09, Hormiga obrera HO0012 se dispone a ir hacia el comedor
+2023-05-07 13:23:10, Hormiga soldado HS0003 entra a la zona de instrucción
+2023-05-07 13:23:10, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:23:10, Hormiga obrera HO0014 entra al almacen a recoger comida
+2023-05-07 13:23:10, Hormiga cria HC0003 procede a descansar
+2023-05-07 13:23:10, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:23:10, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:23:10, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:23:10, Hormiga soldado HS0001 entra a la zona de instrucción
+2023-05-07 13:23:10, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:23:11, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:23:11, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:23:11, Hormiga soldado HS0002 entra a la zona de instrucción
+2023-05-07 13:23:11, Hormiga obrera HO0013 entra al almacen a almacenar comida
+2023-05-07 13:23:12, Ha aparecido un invasor
+2023-05-07 13:23:12, Hormiga cria HC0001 procede a refugiarse
+2023-05-07 13:23:12, Hormiga soldado HS0002 acude a repeler al invasor
+2023-05-07 13:23:12, Hormiga soldado HS0001 acude a repeler al invasor
+2023-05-07 13:23:12, Hormiga cria HC0003 procede a refugiarse
+2023-05-07 13:23:12, Hormiga soldado HS0003 acude a repeler al invasor
+2023-05-07 13:23:12, Hormiga cria HC0002 procede a refugiarse
+2023-05-07 13:23:12, Hormiga soldado HS0004 acude a repeler al invasor
+2023-05-07 13:23:12, Hormiga cria HC0004 procede a refugiarse
+2023-05-07 13:23:12, Hormiga obrera HO0015 sale a recoger comida
+2023-05-07 13:23:12, Hormiga obrera HO0012 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:13, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:13, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:23:14, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:23:14, Hormiga obrera HO0007 sale a recoger comida
+2023-05-07 13:23:14, Hormiga obrera HO0001 sale a recoger comida
+2023-05-07 13:23:14, Hormiga obrera HO0012 entra al almacen a recoger comida
+2023-05-07 13:23:14, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:23:15, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:23:15, Hormiga cria HC0005 procede a refugiarse
+2023-05-07 13:23:15, Hormiga obrera HO0011 entra al almacen a almacenar comida
+2023-05-07 13:23:15, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:23:15, Hormiga obrera HO0016 entra al almacen a recoger comida
+2023-05-07 13:23:16, Hormiga obrera HO0015 entra al almacen a almacenar comida
+2023-05-07 13:23:16, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:23:16, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:17, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:17, Hormiga obrera HO0014 se dispone a ir hacia el comedor
+2023-05-07 13:23:18, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:23:18, Hormiga obrera HO0003 entra al almacen a almacenar comida
+2023-05-07 13:23:18, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:23:18, Hormiga obrera HO0017 sale a recoger comida
+2023-05-07 13:23:19, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:23:19, Hormiga obrera HO0014 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:19, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:23:19, Hormiga obrera HO0010 se dispone a ir hacia el comedor
+2023-05-07 13:23:19, Hormiga obrera HO0011 sale a recoger comida
+2023-05-07 13:23:19, Hormiga obrera HO0006 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:20, Hormiga obrera HO0018 entra al almacen a recoger comida
+2023-05-07 13:23:21, Hormiga obrera HO0010 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:21, Hormiga obrera HO0008 se dispone a ir hacia el comedor
+2023-05-07 13:23:21, Hormiga obrera HO0014 entra al almacen a recoger comida
+2023-05-07 13:23:21, Hormiga obrera HO0015 sale a recoger comida
+2023-05-07 13:23:21, Hormiga obrera HO0006 entra al almacen a recoger comida
+2023-05-07 13:23:21, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:23:22, Hormiga obrera HO0002 se dispone a ir hacia el comedor
+2023-05-07 13:23:22, Hormiga obrera HO0005 sale a recoger comida
+2023-05-07 13:23:22, Hormiga obrera HO0010 entra al almacen a recoger comida
+2023-05-07 13:23:22, Hormiga obrera HO0008 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:22, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:23:22, Hormiga cria HC0006 procede a refugiarse
+2023-05-07 13:23:23, Hormiga obrera HO0002 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:23, Hormiga obrera HO0016 se dispone a ir hacia el comedor
+2023-05-07 13:23:23, Hormiga obrera HO0013 sale a recoger comida
+2023-05-07 13:23:24, Hormiga obrera HO0008 entra al almacen a recoger comida
+2023-05-07 13:23:24, Hormiga obrera HO0019 sale a recoger comida
+2023-05-07 13:23:24, Hormiga obrera HO0002 entra al almacen a recoger comida
+2023-05-07 13:23:25, Hormiga obrera HO0017 entra al almacen a almacenar comida
+2023-05-07 13:23:25, Hormiga obrera HO0004 se dispone a ir hacia el comedor
+2023-05-07 13:23:25, Hormiga obrera HO0009 sale a recoger comida
+2023-05-07 13:23:26, Hormiga obrera HO0020 entra al almacen a recoger comida
+2023-05-07 13:23:26, Hormiga obrera HO0003 sale a recoger comida
+2023-05-07 13:23:26, Hormiga soldado HS0005 entra a la zona de descanso
+2023-05-07 13:23:26, Hormiga obrera HO0016 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:26, Hormiga soldado HS0006 entra a la zona de descanso
+2023-05-07 13:23:26, Hormiga obrera HO0021 sale a recoger comida
+2023-05-07 13:23:26, Hormiga obrera HO0004 entra en el comedor y se dispone a servir comida
+2023-05-07 13:23:28, Hormiga obrera HO0016 entra al almacen a recoger comida
+2023-05-07 13:23:28, Hormiga soldado HS0005 entra a la zona de instrucción
+2023-05-07 13:23:28, Hormiga obrera HO0004 entra al almacen a recoger comida
+2023-05-07 13:23:28, Hormiga obrera HO0017 sale a recoger comida
+2023-05-07 13:23:28, Hormiga soldado HS0007 entra a la zona de instrucción
+2023-05-07 13:23:28, Hormiga cria HC0007 procede a refugiarse
+2023-05-07 13:23:28, Hormiga soldado HS0006 entra a la zona de instrucción
+2023-05-07 13:23:29, Hormiga obrera HO0006 se dispone a ir hacia el comedor
+2023-05-07 13:23:29, Hormiga obrera HO0001 entra al almacen a almacenar comida
+2023-05-07 13:23:29, Hormiga obrera HO0007 entra al almacen a almacenar comida
+2023-05-07 13:23:29, Hormiga obrera HO0009 entra al almacen a almacenar comida
+2023-05-07 13:23:29, Hormiga obrera HO0019 entra al almacen a almacenar comida
+2023-05-07 13:23:30, Hormiga obrera HO0013 entra al almacen a almacenar comida
+2023-05-07 13:23:30, Hormiga obrera HO0005 entra al almacen a almacenar comida
+2023-05-07 13:23:30, Hormiga obrera HO0015 entra al almacen a almacenar comida
