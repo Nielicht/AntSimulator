@@ -2,18 +2,28 @@ package GUI;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import Logica.Colonia;
 import Logica.Generador;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
 public class Interfaz extends Application {
 
+    @FXML
+    public ToggleButton btnPausa;
+    @FXML
+    public Button btnAmenaza;
     @FXML
     private ListView exteriorStatus;
     @FXML
@@ -34,9 +44,14 @@ public class Interfaz extends Application {
     private TextField comidaAlmacenStatus;
     @FXML
     private TextField comidaComedorStatus;
+    private Colonia colonia;
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public void linkColonia(Colonia colonia) {
+        this.colonia = colonia;
     }
 
     public void updateHormigas(Object[] datos) {
@@ -77,6 +92,29 @@ public class Interfaz extends Application {
 
         this.comidaAlmacenStatus.setText(String.valueOf(unidadesComidaAlmacen));
         this.comidaComedorStatus.setText(String.valueOf(unidadesComidaComedor));
+    }
+
+    @FXML
+    public void btnAmenazaPress() {
+        playBtnSonido();
+        this.colonia.triggerInvasion();
+    }
+
+    @FXML
+    public void togglePausa() {
+        playBtnSonido();
+        if (btnPausa.isSelected()) {
+            colonia.pausa();
+        } else {
+            colonia.reanudar();
+        }
+    }
+
+    private void playBtnSonido() {
+        String path = getClass().getResource("/audio/btn.wav").toString();
+        Media media = new Media(path);
+        MediaPlayer mp = new MediaPlayer(media);
+        mp.play();
     }
 
     @Override

@@ -1,10 +1,8 @@
 package Logica;
 
-import javafx.application.Platform;
-
 public class HObrera extends Thread {
 
-    private String id;
+    private String id, proximoEstado;
     private Colonia colonia;
     private int iter, comidaTransportada;
 
@@ -13,9 +11,10 @@ public class HObrera extends Thread {
         this.iter = 10;
         this.colonia = colonia;
         this.comidaTransportada = 0;
+        this.proximoEstado = "";
     }
 
-    private void recogerComida() throws InterruptedException {
+    private void recogerComidaExterior() throws InterruptedException {
         colonia.logger.log("Hormiga obrera " + this.id + " sale a recoger comida");
         colonia.accederTunerSalida();
         colonia.buscandoComida.add(this.id);
@@ -27,11 +26,11 @@ public class HObrera extends Thread {
     private void recogerComidaAlmacen() throws InterruptedException {
         colonia.logger.log("Hormiga obrera " + this.id + " entra al almacen a recoger comida");
 
-        colonia.recogerDelAlmacen(1000, 2000, 5, this.id);
+        colonia.accederAlAlmacen(1000, 2000, -5, this.id);
         this.comidaTransportada += 5;
     }
 
-    private void almacenarComida() throws InterruptedException {
+    private void almacenarComidaAlmacen() throws InterruptedException {
         colonia.logger.log("Hormiga obrera " + this.id + " entra al almacen a almacenar comida");
 
         colonia.accederTunelEntrada();
@@ -56,7 +55,6 @@ public class HObrera extends Thread {
     private void comer() throws InterruptedException {
         colonia.logger.log("Hormiga obrera " + this.id + " procede a comer");
         colonia.accederAlComedor(3000, 3000, -1, this.id);
-        System.out.println("Hormiga " + this.id + " procedió a la comisión\n");
     }
 
     private void descansar() throws InterruptedException {
@@ -64,29 +62,80 @@ public class HObrera extends Thread {
         colonia.descansar(1000, 1000, this.id);
     }
 
-    @Override
-    public void run() {
-        colonia.accederTunelEntrada();
+    private void determinarIntinerario() {
+        if (iter <= 0) {
+            this.proximoEstado = "descansar";
+            return;
+        }
+
         int id = Integer.parseInt(this.id.replaceAll("\\D+", ""));
         boolean esPar = id % 2 == 0;
 
+        if (esPar) {
+            this.proximoEstado = "recogerDelAlmacen";
+        } else {
+            this.proximoEstado = "recogerDelExterior";
+        }
+    }
+
+    private void limpiarZonas() {
+        this.colonia.buscandoComida.remove(this.id);
+        this.colonia.zonaDeAlmacenaje.remove(this.id);
+        this.colonia.transportandoAlComedor.remove(this.id);
+        this.colonia.zonaParaComer.remove(this.id);
+        this.colonia.zonaDeDescanso.remove(this.id);
+    }
+
+    private void interruptHandler() {
+        this.colonia.realizarPausa();
+        limpiarZonas();
+    }
+
+    @Override
+    public void run() {
+        colonia.accederTunelEntrada();
+        determinarIntinerario();
+
+        if (this.colonia.estaPausado()) this.colonia.realizarPausa();
         while (true) {
             try {
-                if (iter > 0 && esPar) { // Hormigas pares
-                    recogerComidaAlmacen();
-                    irZonaComedor();
-                    depositarComida();
-                    iter--;
-                } else if (iter > 0 && !esPar) { // Hormigas impares
-                    recogerComida();
-                    almacenarComida();
-                    iter--;
-                } else { // Descanso time
-                    comer();
-                    descansar();
-                    this.iter = 10;
+                switch (proximoEstado) {
+                    case "recogerDelAlmacen" -> {
+                        recogerComidaAlmacen();
+                        this.proximoEstado = "transportar";
+                    }
+                    case "transportar" -> {
+                        irZonaComedor();
+                        this.proximoEstado = "depositar";
+                    }
+                    case "depositar" -> {
+                        depositarComida();
+                        iter--;
+                        determinarIntinerario();
+                    }
+
+                    case "recogerDelExterior" -> {
+                        recogerComidaExterior();
+                        this.proximoEstado = "almacenar";
+                    }
+                    case "almacenar" -> {
+                        almacenarComidaAlmacen();
+                        iter--;
+                        determinarIntinerario();
+                    }
+
+                    case "comer" -> {
+                        comer();
+                        this.proximoEstado = "descansar";
+                    }
+                    case "descansar" -> {
+                        descansar();
+                        this.iter = 10;
+                        determinarIntinerario();
+                    }
                 }
-            } catch (InterruptedException ignored) {
+            } catch (InterruptedException e) {
+                interruptHandler();
             }
         }
     }

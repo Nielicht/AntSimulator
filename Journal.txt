@@ -40,3 +40,26 @@ Sunday, 7th of May
 - Life is not a shade of black anymore.
 - I just found that worker ants are SO FAT that they get stuck in the storage room (synchronization deadlock).
 - >:(
+
+Monday, 8th of May
+- The obesity problem has gone out of hand, multiple synchronization problems have been detected.
+- Everything I try does nothing or makes things worse.
+- Implemented a fear-induction system that makes the ants pause until explicitly said.
+- They ignore it.
+- I have brainwashed once again every type of ant with a new redesigned routine methodology, which essentially does the
+  same thing but better and hopefully make the pause thing work.
+- It works!... partially. Some ants do still give me a middle finger.
+- I am flabbergasted and uttermostly tired of this shit.
+
+Tuesday, 9th of May
+- I have come up with ideas to solve the obesity and fear-inducted pausing thing.
+- They didn't work at all.
+
+Wednesday, 10th of May
+- I have found the root of all evil.
+- I HAVE PUNCHED IT IN THE GUTS.
+- EVERYTHING WORKS NOW.
+- THIS IS BEAUTIFUL.
+- I still have to implement the distributed part and make the pdf/documentation.
+- Delivery is in one and a half days.
+- Bruh.

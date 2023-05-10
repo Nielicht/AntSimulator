@@ -8,8 +8,8 @@ public class Generador extends Thread {
     private int numHormiga;
 
     public Generador(Interfaz controlador) {
-        this.colonia = new Colonia(controlador);
         this.numHormiga = 1;
+        this.colonia = new Colonia(controlador, this);
     }
 
     @Override
@@ -17,16 +17,16 @@ public class Generador extends Thread {
         System.out.println("Simulación comenzada\n");
 
         while (true) {
-            if (numHormiga == 20) colonia.triggerInvasion();
-            int ratioGeneracion = (int) (Math.random() * 3000) + 500;
             try {
+                int ratioGeneracion = (int) (Math.random() * 3000) + 500;
                 Thread.sleep(ratioGeneracion);
-            } catch (InterruptedException ignored) {
-            }
-            colonia.generarHormiga();
-            System.out.println("ID = " + numHormiga + ", TGen = " + (float) ratioGeneracion / 1000 + " Segundos\n");
+                colonia.generarHormiga();
 
-            numHormiga++;
+                System.out.println("ID = " + numHormiga + ", TGen = " + (float) ratioGeneracion / 1000 + " Segundos\n");
+                numHormiga++;
+            } catch (InterruptedException e) {
+                this.colonia.realizarPausa();
+            }
         }
     }
 }

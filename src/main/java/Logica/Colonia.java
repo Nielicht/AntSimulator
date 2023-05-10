@@ -1,5 +1,6 @@
 package Logica;
 
+import GUI.GUIUpdater;
 import GUI.Interfaz;
 
 import java.util.HashMap;
@@ -12,34 +13,38 @@ public class Colonia {
     public Logger logger;
 
     // Misceláneo
-    private boolean invasorPresente;
+    private Generador generador;
+    private volatile boolean invasorPresente, estaPausado;
     private int obrerasPorGenerar, soldadosyCriasPorGenerar, obrerasID, soldadosID, criasID, iter;
 
     // Sincronización
     private AtomicInteger unidadesComidaAlmacen, unidadesComidaComedor;
-    private Semaphore tunelEntrada, limiteHormigasEnAlmacen;
+    private Semaphore tunelSalida, limiteHormigasEnAlmacen;
+    private Object monitor;
     private CyclicBarrier invasionAgrupacion;
-    private CountDownLatch invasorRepelido;
+    private CountDownLatch invasorRepelido, pausa;
 
     // Hormigas
-    private HashMap<Integer, HObrera> obreras;
+    private ConcurrentHashMap<Integer, HObrera> obreras;
     private ConcurrentHashMap<Integer, HSoldado> soldados;
     private ConcurrentHashMap<Integer, HCria> crias;
 
     // GUI
     public CopyOnWriteArrayList<String> buscandoComida;
-    private CopyOnWriteArrayList<String> zonaDeAlmacenaje;
+    public CopyOnWriteArrayList<String> zonaDeAlmacenaje;
     public CopyOnWriteArrayList<String> transportandoAlComedor;
     public CopyOnWriteArrayList<String> zonaDeInstruccion;
     public CopyOnWriteArrayList<String> zonaDeDescanso;
     public CopyOnWriteArrayList<String> zonaParaComer;
-    private CopyOnWriteArrayList<String> zonaParaRefugiarse;
-    private CopyOnWriteArrayList<String> repeliendoInvasor;
+    public CopyOnWriteArrayList<String> zonaParaRefugiarse;
+    public CopyOnWriteArrayList<String> repeliendoInvasor;
     public GUIUpdater guiUpdater;
 
-    public Colonia(Interfaz controlador) {
+    public Colonia(Interfaz controlador, Generador generador) {
         this.logger = new Logger();
+        this.generador = generador;
         this.invasorPresente = false;
+        this.estaPausado = false;
         this.obrerasPorGenerar = 6000;
         this.soldadosyCriasPorGenerar = 2000;
         this.obrerasID = 1;
@@ -48,9 +53,10 @@ public class Colonia {
         this.iter = 0;
         this.unidadesComidaAlmacen = new AtomicInteger(0);
         this.unidadesComidaComedor = new AtomicInteger(0);
-        this.tunelEntrada = new Semaphore(2, true);
+        this.monitor = new Object();
+        this.tunelSalida = new Semaphore(2, true);
         this.limiteHormigasEnAlmacen = new Semaphore(10, true);
-        this.obreras = new HashMap<>();
+        this.obreras = new ConcurrentHashMap<>();
         this.soldados = new ConcurrentHashMap<>();
         this.crias = new ConcurrentHashMap<>();
 
@@ -62,6 +68,7 @@ public class Colonia {
         this.zonaParaComer = new CopyOnWriteArrayList<>();
         this.zonaParaRefugiarse = new CopyOnWriteArrayList<>();
         this.repeliendoInvasor = new CopyOnWriteArrayList<>();
+        controlador.linkColonia(this);
         this.guiUpdater = new GUIUpdater(controlador, this);
 
         Thread hiloGUIUpdater = new Thread(this.guiUpdater);
@@ -69,17 +76,28 @@ public class Colonia {
         hiloGUIUpdater.start();
     }
 
+    public void realizarPausa() {
+        while (estaPausado) {
+            try {
+                this.pausa.await();
+            } catch (InterruptedException ignored) {
+            }
+        }
+    }
+
     public void triggerInvasion() {
+        if (invasorPresente || estaPausado) return;
+
         HashMap<Integer, HSoldado> soldadosActuales = new HashMap<>(soldados);
         this.invasorRepelido = new CountDownLatch(soldadosActuales.size());
         this.invasionAgrupacion = new CyclicBarrier(soldadosActuales.size());
+        this.invasorPresente = true;
+        this.logger.log("Ha aparecido un invasor");
 
         new Thread(this::invasionManager).start();
-        this.logger.log("Ha aparecido un invasor");
         for (HSoldado soldado : soldadosActuales.values()) {
             soldado.interrupt();
         }
-
         for (HCria cria : crias.values()) {
             cria.interrupt();
         }
@@ -87,21 +105,30 @@ public class Colonia {
 
     public void invasionManager() {
         try {
-            this.invasorPresente = true;
             invasorRepelido.await();
         } catch (InterruptedException ignored) {
+            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         } finally {
             this.invasorPresente = false;
             this.logger.log("El invasor ha sido repelido");
         }
     }
 
-    public void repelerInvasor(String id) throws BrokenBarrierException, InterruptedException {
-        this.repeliendoInvasor.add(id);
-        this.invasionAgrupacion.await();
-        Thread.sleep(20000);
-        this.invasorRepelido.countDown();
-        this.repeliendoInvasor.remove(id);
+    public void repelerInvasor(String id) {
+        while (invasorPresente) {
+            try {
+                this.repeliendoInvasor.add(id);
+                this.invasionAgrupacion.await();
+                Thread.sleep(20000);
+                this.invasorRepelido.countDown();
+                while (invasorPresente) Thread.onSpinWait();
+            } catch (BrokenBarrierException | InterruptedException e) {
+                System.out.println("Realizando pausa");
+                realizarPausa();
+            } finally {
+                this.repeliendoInvasor.remove(id);
+            }
+        }
     }
 
     public void accederAlComedor(int min, int max, int comida, String id) throws InterruptedException {
@@ -120,37 +147,23 @@ public class Colonia {
         this.zonaDeDescanso.remove(id);
     }
 
-    public void accederAlAlmacen(int min, int max, int comida, String id) throws InterruptedException {
+    public void accederAlAlmacen(int min, int max, int comida, String id) {
         int tiempoAlmacenando = (int) (Math.random() * (max - min)) + min;
+        boolean recoger = comida < 0, done = false;
 
-        limiteHormigasEnAlmacen.acquire();
-        this.zonaDeAlmacenaje.add(id);
-        try {
-            Thread.sleep(tiempoAlmacenando);
-            unidadesComidaAlmacen.addAndGet(comida);
-
-            synchronized (this) {
-                notifyAll();
-            }
-        } finally {
-            limiteHormigasEnAlmacen.release();
-            this.zonaDeAlmacenaje.remove(id);
-        }
-    }
-
-    public void recogerDelAlmacen(int min, int max, int comida, String id) throws InterruptedException {
-        int tiempoRecogiendo = (int) (Math.random() * (max - min)) + min;
-
-        synchronized (this) {
-            while (this.unidadesComidaAlmacen.get() - comida < 0) {
-                wait();
-            }
-
-            limiteHormigasEnAlmacen.acquire();
-            this.zonaDeAlmacenaje.add(id);
+        while (!done) {
             try {
-                Thread.sleep(tiempoRecogiendo);
-                this.unidadesComidaAlmacen.addAndGet(-comida);
+                limiteHormigasEnAlmacen.acquireUninterruptibly();
+                this.zonaDeAlmacenaje.add(id);
+                Thread.sleep(tiempoAlmacenando);
+                if (unidadesComidaAlmacen.addAndGet(comida) < 0 && recoger) {
+                    unidadesComidaAlmacen.addAndGet(-comida);
+                } else {
+                    unidadesComidaAlmacen.addAndGet(comida);
+                    done = true;
+                }
+            } catch (InterruptedException e) {
+                realizarPausa();
             } finally {
                 limiteHormigasEnAlmacen.release();
                 this.zonaDeAlmacenaje.remove(id);
@@ -166,10 +179,18 @@ public class Colonia {
         this.zonaDeInstruccion.remove(id);
     }
 
-    public void accederAlRefugio(String id) throws InterruptedException {
-        this.zonaParaRefugiarse.add(id);
-        invasorRepelido.await();
-        this.zonaParaRefugiarse.remove(id);
+    public void accederAlRefugio(String id) {
+        while (invasorPresente) {
+            try {
+                this.zonaParaRefugiarse.add(id);
+                invasorRepelido.await();
+                while (invasorPresente) Thread.onSpinWait();
+            } catch (InterruptedException e) {
+                realizarPausa();
+            } finally {
+                this.zonaParaRefugiarse.remove(id);
+            }
+        }
     }
 
     public void generarHormiga() {
@@ -208,20 +229,30 @@ public class Colonia {
         }
     }
 
-    public void accederTunelEntrada() {
-        try {
-            tunelEntrada.acquire();
-            Thread.sleep(100);
-        } catch (InterruptedException ignored) {
-        } finally {
-            tunelEntrada.release();
+    public synchronized void accederTunelEntrada() {
+        boolean accedido = false;
+        while (!accedido) {
+            try {
+                Thread.sleep(100);
+                accedido = true;
+            } catch (InterruptedException ignored) {
+                realizarPausa();
+            }
         }
     }
 
-    public synchronized void accederTunerSalida() {
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException ignored) {
+    public void accederTunerSalida() {
+        boolean accedido = false;
+        while (!accedido) {
+            try {
+                tunelSalida.acquireUninterruptibly();
+                Thread.sleep(100);
+                accedido = true;
+            } catch (InterruptedException e) {
+                realizarPausa();
+            } finally {
+                tunelSalida.release();
+            }
         }
     }
 
@@ -244,5 +275,38 @@ public class Colonia {
         datos[9] = this.unidadesComidaComedor;
 
         return datos;
+    }
+
+    public void pausa() {
+        if (estaPausado) return;
+
+        this.pausa = new CountDownLatch(1);
+        this.estaPausado = true;
+        this.generador.interrupt();
+
+        for (HObrera obrera : obreras.values()) {
+            obrera.interrupt();
+        }
+
+        for (HSoldado soldado : soldados.values()) {
+            soldado.interrupt();
+        }
+
+        for (HCria cria : crias.values()) {
+            cria.interrupt();
+        }
+
+        this.logger.log("El programa fue pausado");
+    }
+
+    public boolean estaPausado() {
+        return estaPausado;
+    }
+
+    public void reanudar() {
+        if (invasorPresente) invasionAgrupacion.reset();
+        this.estaPausado = false;
+        pausa.countDown();
+        this.logger.log("El programa fue reanudado");
     }
 }

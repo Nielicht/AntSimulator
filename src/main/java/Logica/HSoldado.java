@@ -4,7 +4,7 @@ import java.util.concurrent.BrokenBarrierException;
 
 public class HSoldado extends Thread {
 
-    private String id;
+    private String id, proximoEstado;
     private Colonia colonia;
     private int iter;
 
@@ -12,17 +12,12 @@ public class HSoldado extends Thread {
         this.id = "HS" + String.format("%04d", id);
         this.iter = 6;
         this.colonia = colonia;
+        this.proximoEstado = "instruccion";
     }
 
     private void protegerColonia() {
-        try {
-            colonia.logger.log("Hormiga soldado " + this.id + " acude a repeler al invasor");
-            colonia.repelerInvasor(this.id);
-        } catch (BrokenBarrierException e) {
-            System.out.println("Algo fue mal con el cyclic barrier...");
-            e.printStackTrace();
-        } catch (InterruptedException ignored) {
-        }
+        colonia.logger.log("Hormiga soldado " + this.id + " acude a repeler al invasor");
+        colonia.repelerInvasor(this.id);
     }
 
     private void instruccion() throws InterruptedException {
@@ -40,25 +35,51 @@ public class HSoldado extends Thread {
         colonia.accederAlComedor(3000, 3000, -1, this.id);
     }
 
+    private void limpiarZonas() {
+        this.colonia.zonaDeInstruccion.remove(this.id);
+        this.colonia.zonaDeDescanso.remove(this.id);
+        this.colonia.zonaParaComer.remove(this.id);
+    }
+
+    private void interruptHandler() {
+        if (this.colonia.hayInvasor()) {
+            limpiarZonas();
+            protegerColonia();
+        } else if (this.colonia.estaPausado()) {
+            this.colonia.realizarPausa();
+            limpiarZonas();
+        }
+    }
+
     @Override
     public void run() {
         colonia.accederTunelEntrada();
+
+        if (this.colonia.estaPausado()) this.colonia.realizarPausa();
         while (true) {
             try {
-                if (this.iter > 0) {
-                    instruccion();
-                    descansar();
-                    this.iter--;
-                } else {
-                    comer();
-                    this.iter = 6;
+                switch (proximoEstado) {
+                    case "instruccion" -> {
+                        instruccion();
+                        this.proximoEstado = "descansar";
+                    }
+                    case "descansar" -> {
+                        descansar();
+                        iter--;
+                        if (iter > 0) this.proximoEstado = "instruccion";
+                        else this.proximoEstado = "comer";
+                    }
+
+                    case "comer" -> {
+                        comer();
+                        this.iter = 6;
+                        this.proximoEstado = "instruccion";
+                    }
                 }
             } catch (InterruptedException e) {
-                this.colonia.zonaDeInstruccion.remove(this.id);
-                this.colonia.zonaDeDescanso.remove(this.id);
-                this.colonia.zonaParaComer.remove(this.id);
-                protegerColonia();
+                interruptHandler();
             }
         }
     }
+
 }
