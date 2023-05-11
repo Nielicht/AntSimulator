@@ -1,15 +1,19 @@
 package Logica;
 
-import GUI.Interfaz;
+import GUI.InterfazConcurrente;
 
 public class Generador extends Thread {
 
     private Colonia colonia;
     private int numHormiga;
 
-    public Generador(Interfaz controlador) {
+    public Generador() {
         this.numHormiga = 1;
-        this.colonia = new Colonia(controlador, this);
+        this.colonia = new Colonia(this);
+    }
+
+    public Colonia getColonia() {
+        return colonia;
     }
 
     @Override

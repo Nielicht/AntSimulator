@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="884.0" prefWidth="870.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exterior de la colonia" textAlignment="JUSTIFY" />
+      <Text layoutX="24.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscando comida en el exterior" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="exteriorStatus" layoutX="24.0" layoutY="86.0" prefHeight="256.0" prefWidth="181.0" />
+      <Text layoutX="455.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Repeliendo insecto invasor" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="invasorStatus" layoutX="223.0" layoutY="86.0" prefHeight="256.0" prefWidth="619.0" />
+      <Text layoutX="15.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interior de la colonia" textAlignment="JUSTIFY" />
+      <Text layoutX="24.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Almacen de comida" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="almacenStatus" layoutX="24.0" layoutY="418.0" prefHeight="256.0" prefWidth="181.0" />
+      <Text layoutX="241.0" layoutY="390.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Llevando comida al comedor" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="comidaAlComedor" layoutX="241.0" layoutY="418.0" prefHeight="256.0" prefWidth="181.0" />
+      <Text layoutX="455.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zona de descanso" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="descansoStatus" layoutX="455.0" layoutY="418.0" prefHeight="256.0" prefWidth="181.0" />
+      <Text layoutX="24.0" layoutY="703.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comedor" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="comedorStatus" layoutX="24.0" layoutY="715.0" prefHeight="99.0" prefWidth="181.0" />
+      <Text layoutX="346.0" layoutY="703.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Refugio crias" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="refugioStatus" layoutX="227.0" layoutY="715.0" prefHeight="99.0" prefWidth="619.0" />
+      <Text layoutX="14.0" layoutY="840.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unidades comida almacen:" textAlignment="CENTER" wrappingWidth="181.0" />
+      <Text layoutX="14.0" layoutY="863.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unidades comida comedor:" textAlignment="CENTER" wrappingWidth="181.0" />
+      <TextField fx:id="comidaAlmacenStatus" layoutX="207.0" layoutY="823.0" prefHeight="24.0" prefWidth="68.0" />
+      <TextField fx:id="comidaComedorStatus" layoutX="207.0" layoutY="846.0" prefHeight="24.0" prefWidth="68.0" />
+      <Text layoutX="665.0" layoutY="406.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zona de instruccion" textAlignment="CENTER" wrappingWidth="181.0" />
+      <ListView fx:id="instruccionStatus" layoutX="665.0" layoutY="418.0" prefHeight="256.0" prefWidth="181.0" />
+      <Button fx:id="btnAmenaza" layoutX="478.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnAmenazaPress" text="Generar amenaza" />
+      <ToggleButton fx:id="btnPausa" layoutX="691.0" layoutY="835.0" mnemonicParsing="false" onAction="#togglePausa" text="Pausar ejecucion" />
+   </children>
+</AnchorPane>

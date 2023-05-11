@@ -1,8 +1,5 @@
 package Logica;
 
-import GUI.GUIUpdater;
-import GUI.Interfaz;
-
 import java.util.HashMap;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -20,7 +17,6 @@ public class Colonia {
     // Sincronización
     private AtomicInteger unidadesComidaAlmacen, unidadesComidaComedor;
     private Semaphore tunelSalida, limiteHormigasEnAlmacen;
-    private Object monitor;
     private CyclicBarrier invasionAgrupacion;
     private CountDownLatch invasorRepelido, pausa;
 
@@ -38,9 +34,8 @@ public class Colonia {
     public CopyOnWriteArrayList<String> zonaParaComer;
     public CopyOnWriteArrayList<String> zonaParaRefugiarse;
     public CopyOnWriteArrayList<String> repeliendoInvasor;
-    public GUIUpdater guiUpdater;
 
-    public Colonia(Interfaz controlador, Generador generador) {
+    public Colonia(Generador generador) {
         this.logger = new Logger();
         this.generador = generador;
         this.invasorPresente = false;
@@ -53,7 +48,6 @@ public class Colonia {
         this.iter = 0;
         this.unidadesComidaAlmacen = new AtomicInteger(0);
         this.unidadesComidaComedor = new AtomicInteger(0);
-        this.monitor = new Object();
         this.tunelSalida = new Semaphore(2, true);
         this.limiteHormigasEnAlmacen = new Semaphore(10, true);
         this.obreras = new ConcurrentHashMap<>();
@@ -68,12 +62,6 @@ public class Colonia {
         this.zonaParaComer = new CopyOnWriteArrayList<>();
         this.zonaParaRefugiarse = new CopyOnWriteArrayList<>();
         this.repeliendoInvasor = new CopyOnWriteArrayList<>();
-        controlador.linkColonia(this);
-        this.guiUpdater = new GUIUpdater(controlador, this);
-
-        Thread hiloGUIUpdater = new Thread(this.guiUpdater);
-        hiloGUIUpdater.setDaemon(true);
-        hiloGUIUpdater.start();
     }
 
     public void realizarPausa() {
